@@ -20,13 +20,14 @@ cd ../../                                   # returns to root
 # INSTALLS DJANGO/PYTHON AND RELATING DEPENDENCIES
 echo [INSTALLING DEPENDENCIES]
 cd virtualenvfolder
-./install_dependencies.sh && echo [FINISHED INSTALLING DEPENDENCIES]
+./install_dependencies.sh
+pip install -U Django && echo [FINISHED INSTALLING DEPENDENCIES]
 
 # SETUP DJANGO DB USER AND DATABASE
 # logs as user "postgres" and create the user and database and grants permission of the new user to it
 echo [SETTING UP DB USER AND DATABASE]
 echo [PLEASE FOLLOW INSTRUCTIONS IN THE README FILE TO SKIP OR END TYPE "exit"]
-sudo su - postgres && echo [CONTINUING SETUP]
+# sudo su - postgres && echo [CONTINUING SETUP]
 
 # INSTALLS FRONTEND REACT AND OTHER DEPENDENCIES
 # echo [INSTALLING FRONTEND]
