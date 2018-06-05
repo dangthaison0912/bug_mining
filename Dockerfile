@@ -7,16 +7,16 @@ WORKDIR /app
 ADD . /app
 
 # Install all needed packages in requirements.txt
-RUN pip install -r Backend/requirements.txt
+RUN pip install -r virtualenvfolder/requirements.txt
 # Expose port 80 for webapp
 EXPOSE 80
 
 # Define environment variable
 #ENV NAME World
-#RUN python Backend/doc_ta/manage.py makemigrations
-#RUN python Backend/doc_ta/manage.py migrate
+#RUN python virtualenvfolder/bugmining/manage.py makemigrations
+#RUN python virtualenvfolder/bugmining/manage.py migrate
 #RUN mkdir docker-entrypoint-init-db.d
 #ADD ./init.sql /docker-entrypoint-init-db.d/init.sql # adds the sql user/db creation script to specific docker folder
-#ENV POSTGRES_DB doctimetable_default_db
-#ENV POSTGRES_USER foofighter
-#ENV POSTGRES_PASSWORD dleifynot
+#ENV POSTGRES_DB mydatabase
+#ENV POSTGRES_USER son
+#ENV POSTGRES_PASSWORD son
