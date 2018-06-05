@@ -26,7 +26,7 @@ cd virtualenvfolder
 # logs as user "postgres" and create the user and database and grants permission of the new user to it
 echo [SETTING UP DB USER AND DATABASE]
 echo [PLEASE FOLLOW INSTRUCTIONS IN THE README FILE TO SKIP OR END TYPE "exit"]
-sudo su postgres && echo [CONTINUING SETUP]
+sudo su son && echo [CONTINUING SETUP]
 
 # INSTALLS FRONTEND REACT AND OTHER DEPENDENCIES
 # echo [INSTALLING FRONTEND]
