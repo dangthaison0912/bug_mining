@@ -56,14 +56,42 @@ def get_committed_files(innerhtml):
         files = []
         for d in data_extracted:
             path = d.find("span", {"class" : "fullFileName style-scope gr-file-list"})
-            added = d.find("span", {"class" : "added style-scope gr-file-list"})
-            deleted = d.find("span", {"class" : "removed style-scope gr-file-list"})
-            file_information = []
-            file_information.append(path.string)
-            file_information.append(added.string)
-            file_information.append(deleted.string)
-            files.append(file_information)
+            if (path.string.strip() != "Commit message"):
+                added = d.find("span", {"class" : "added style-scope gr-file-list"})
+                deleted = d.find("span", {"class" : "removed style-scope gr-file-list"})
+                file_information = []
+                file_information.append(path.string.strip())
+                file_information.append(added.string.strip())
+                file_information.append(deleted.string.strip())
+                files.append(file_information)
         return list(files)
+
+def get_authors(innerhtml):
+    """
+    Extract name of all authors fixing the bug
+    """
+    if innerhtml is not None:
+        html = BeautifulSoup(innerhtml, 'html.parser')
+        data_extracted = html.findAll("section", {"class" : "style-scope gr-change-metadata"})
+        files = []
+        for d in data_extracted:
+            title = d.find("span", {"class" : "title style-scope gr-change-metadata"})
+            if (title.string == "Owner"):
+                owner = d.find("span", {"class" : "name style-scope gr-account-label"})
+                print(owner.string.strip())
+
+def get_date(innerhtml):
+    """
+    Extract the date this bug was updated
+    """
+    if innerhtml is not None:
+        html = BeautifulSoup(innerhtml, 'html.parser')
+        data_extracted = html.findAll("section", {"class" : "style-scope gr-change-metadata"})
+        for d in data_extracted:
+            update = d.find("span", {"class" : "title style-scope gr-change-metadata"})
+            if (update.string == "Updated"):
+                date = d.find("gr-date-formatter", {"class" : "style-scope gr-change-metadata x-scope gr-date-formatter-0"})
+                print(date["title"])
 
 
 if __name__ == '__main__':
@@ -78,6 +106,8 @@ if __name__ == '__main__':
             row_string += column + " "
         js_commited_files.write(row_string)
     js_commited_files.close()
+    get_authors(innerhtml)
+    get_date(innerhtml)
     print('Done')
 
     # for id in ids:

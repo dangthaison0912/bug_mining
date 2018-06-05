@@ -250,8 +250,13 @@
     <gr-rest-api-interface id="restAPI" class="style-scope gr-smart-search"></gr-rest-api-interface>
   </gr-smart-search>
         <gr-endpoint-decorator class="hideOnMobile style-scope gr-main-header" name="header-browse-source"></gr-endpoint-decorator>
-        <div class="accountContainer style-scope gr-main-header loggedOut" id="accountContainer">
+        <div class="accountContainer style-scope gr-main-header" id="accountContainer">
           <a class="loginButton style-scope gr-main-header" href="/login/%2Fc%2Fchromium%2Fsrc%2F%2B%2F1070794%2F">Sign in</a>
+          <a class="settingsButton style-scope gr-main-header" title="Settings" href="/settings/">
+            <iron-icon icon="gr-icons:settings" class="style-scope gr-main-header x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" class="style-scope iron-icon"></path></g></svg>
+    
+  </iron-icon>
+          </a>
           <gr-account-dropdown class="style-scope gr-main-header x-scope gr-account-dropdown-0">
     
     <gr-dropdown link="" horizontal-align="right" class="style-scope gr-account-dropdown x-scope gr-dropdown-0">
@@ -259,7 +264,7 @@
     <gr-button class="dropdown-trigger style-scope gr-dropdown x-scope gr-button-0" id="trigger" role="button" tabindex="0" link=""><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
       
         <span hidden="true" class="style-scope gr-account-dropdown"> </span>
-        <gr-avatar image-size="56" aria-label="Account avatar" class="style-scope gr-account-dropdown x-scope gr-avatar-0">
+        <gr-avatar image-size="56" aria-label="Account avatar" class="style-scope gr-account-dropdown x-scope gr-avatar-0" hidden="">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
@@ -4565,11 +4570,7 @@ Cr-Commit-Position: refs/heads/master@{#562694}</span>
         </gr-endpoint-param>
         <gr-endpoint-param name="revision" class="style-scope gr-change-view">
         </gr-endpoint-param>
-      <tricium-view class="style-scope gr-endpoint-decorator x-scope tricium-view-0">
-    
-    <template is="dom-if" class="style-scope tricium-view"></template>
-    <tricium-client id="client" class="style-scope tricium-view"></tricium-client>
-  </tricium-view><cr-buildbucket-view class="style-scope gr-endpoint-decorator x-scope cr-buildbucket-view-0">
+      <cr-buildbucket-view class="style-scope gr-endpoint-decorator x-scope cr-buildbucket-view-0">
     
     <div class="style-scope cr-buildbucket-view">
       <div class="header container style-scope cr-buildbucket-view">
@@ -4577,7 +4578,7 @@ Cr-Commit-Position: refs/heads/master@{#562694}</span>
           <h3 class="label style-scope cr-buildbucket-view">Tryjobs</h3>
           <div class="update style-scope cr-buildbucket-view">
             Showing jobs from patch set 8, 
-            Last updated at 1:50:56 PM
+            Last updated at 4:14:54 AM
           </div>
         </div>
         <div class="container style-scope cr-buildbucket-view">
@@ -6297,7 +6298,11 @@ Cr-Commit-Position: refs/heads/master@{#562694}</span>
     
   </gr-overlay>
     <cr-buildbucket-client id="client" class="style-scope cr-buildbucket-view"></cr-buildbucket-client>
-  </cr-buildbucket-view></gr-endpoint-decorator>
+  </cr-buildbucket-view><tricium-view class="style-scope gr-endpoint-decorator x-scope tricium-view-0">
+    
+    <template is="dom-if" class="style-scope tricium-view"></template>
+    <tricium-client id="client" class="style-scope tricium-view"></tricium-client>
+  </tricium-view></gr-endpoint-decorator>
       <paper-tabs id="commentTabs" class="style-scope gr-change-view x-scope paper-tabs-0" role="tablist" tabindex="0">
     
 
@@ -8893,9 +8898,6 @@ Bot data: {"action": "start", "triggered_at": "2018-05-30T00:26:00.0Z", "cq_cfg_
       </div>
       <div class="style-scope gr-app">
         <a class="feedback style-scope gr-app" href="https://bugs.chromium.org/p/gerrit/issues/entry?template=PolyGerrit%20Issue" rel="noopener" target="_blank">Send feedback</a>
-        
-          |
-          <a id="gwtLink" rel="external" class="style-scope gr-app" href="/?polygerrit=0#/c/chromium/src/+/1070794/">Switch to Old UI</a>
         <template is="dom-if" class="style-scope gr-app"></template>
         | Press “?” for keyboard shortcuts
       </div>
@@ -9349,14 +9351,15 @@ Bot data: {"action": "start", "triggered_at": "2018-05-30T00:26:00.0Z", "cq_cfg_
   </gr-keyboard-shortcuts-dialog>
     
   </gr-overlay>
-    <gr-overlay id="registration" with-backdrop="" class="style-scope gr-app x-scope gr-overlay-0" aria-hidden="true" tabindex="-1" style="outline: none; display: none;">
+    <gr-overlay id="registrationOverlay" with-backdrop="" class="style-scope gr-app x-scope gr-overlay-0" aria-hidden="true" tabindex="-1" style="outline: none; display: none;">
     
     
-      <gr-registration-dialog class="style-scope gr-app x-scope gr-registration-dialog-0" role="dialog">
+      <gr-registration-dialog id="registrationDialog" class="style-scope gr-app loading x-scope gr-registration-dialog-0" role="dialog">
     
     
     <div class="container gr-form-styles style-scope gr-registration-dialog">
       <header class="style-scope gr-registration-dialog">Please confirm your contact information</header>
+      <div class="loadingMessage style-scope gr-registration-dialog">Loading...</div>
       <main class="style-scope gr-registration-dialog">
         <p class="style-scope gr-registration-dialog">
           The following contact information was automatically obtained when you
@@ -9412,7 +9415,7 @@ Bot data: {"action": "start", "triggered_at": "2018-05-30T00:26:00.0Z", "cq_cfg_
     
   <style is="custom-style" include="chromium-style-chromium" class="style-scope gr-external-style"></style></gr-external-style>
   </gr-app>
-<script defer="" src="https://chromium-review.googlesource.com/plugins/analytics/static/analytics.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/commitqueue/static/commitqueue.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/deprecate_gwt/static/deprecate_gwt.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/chumpdetector/static/chumpdetector.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/hats/static/hats.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/landingwidget/static/landingwidget.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/reviewers/static/reviewers/reviewers.nocache.js" gapi_processed="true"></script><iframe id="reviewers" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none; left: -1000px; top: -1000px;"></iframe><iron-a11y-announcer>
+<script defer="" src="https://chromium-review.googlesource.com/plugins/analytics/static/analytics.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/chumpdetector/static/chumpdetector.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/commitqueue/static/commitqueue.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/deprecate_gwt/static/deprecate_gwt.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/hats/static/hats.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/landingwidget/static/landingwidget.js"></script><script defer="" src="https://chromium-review.googlesource.com/plugins/reviewers/static/reviewers/reviewers.nocache.js" gapi_processed="true"></script><iframe id="reviewers" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none; left: -1000px; top: -1000px;"></iframe><iron-a11y-announcer>
     
     <div class="style-scope iron-a11y-announcer" aria-live="polite"></div>
   </iron-a11y-announcer>
