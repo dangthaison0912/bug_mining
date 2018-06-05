@@ -1,0 +1,9 @@
+{% if bug_list %}
+    <ul>
+    {% for bug in bug_list %}
+        <li><a href="{% url 'mining_main:detail' bug.id%}">{{ bug.bug_id }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No bugs are available.</p>
+{% endif %}

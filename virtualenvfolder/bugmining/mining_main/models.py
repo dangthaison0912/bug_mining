@@ -1,19 +1,21 @@
-import datetime
+from datetime import datetime
 
 from django.db import models
 from django.utils import timezone
 
 class Bug(models.Model):
     bug_id = models.CharField(max_length=10)
-    fixed_date = models.DateTimeField('date fixed')
+    updated_date = models.DateTimeField(default=datetime.now, blank=True)
     #to String
     def __str__(self):
         return self.bug_id
 
 
 class File(models.Model):
-    bug = models.ForeignKey(Bug, on_delete=models.CASCADE)
     file_path =models.CharField(max_length=200)
+    bugs = models.ManyToManyField(Bug)
+    added = models.IntegerField(default=0)
+    deleted = models.IntegerField(default=0)
     #to String
     def __str__(self):
         return self.file_path

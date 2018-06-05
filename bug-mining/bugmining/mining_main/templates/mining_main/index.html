@@ -1,9 +1,0 @@
-{% if bug_list %}
-    <ul>
-    {% for bug in bug_list %}
-        <li><a href="/polls/{{ bug.id }}/">{{ bug.fixed_date }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
