@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+#    environment:
+#      - POSTGRES_USER=foofighter
+#      - POSTGRES_PASSWORD=dleifynot
+#      - POSTGRES_DB=doctimetable_default_db
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  web:
+    build: .
+    command: python Backend/doc_ta/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
