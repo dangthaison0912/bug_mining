@@ -21,7 +21,7 @@ cd ../../                                   # returns to root
 echo [INSTALLING DEPENDENCIES]
 cd virtualenvfolder
 ./install_dependencies.sh
-pip install -U Django && echo [FINISHED INSTALLING DEPENDENCIES]
+pip3 install -U Django && echo [FINISHED INSTALLING DEPENDENCIES]
 
 # SETUP DJANGO DB USER AND DATABASE
 # logs as user "postgres" and create the user and database and grants permission of the new user to it
