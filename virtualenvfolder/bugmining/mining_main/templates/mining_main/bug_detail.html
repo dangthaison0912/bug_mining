@@ -1,0 +1,6 @@
+<h1>Bug ID: {{ bug.bug_id }}</h1>
+<ul>
+{% for file in bug.file_set.all %}
+    <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }} {{file.involved}}</a></li>
+{% endfor %}
+</ul>

@@ -1,9 +1,23 @@
-{% if bug_list %}
+<!-- {% if bug_list %}
     <ul>
     {% for bug in bug_list %}
-        <li><a href="{% url 'mining_main:detail' bug.id%}">{{ bug.bug_id }}</a></li>
+        <li><a href="{% url 'mining_main:bug_detail' bug.id%}">{{ bug.bug_id }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No bugs are available.</p>
+{% endif %} -->
+
+{% if file_list %}
+    <ul>
+    {% for file in file_list %}
+        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }}</a></li> {{file.involved}}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No files are available.</p>
 {% endif %}
+<ul>
+  <li><a href="{% url 'mining_main:update' %}">Update</a></li>
+  <li><a href="{% url 'mining_main:delete' %}">Delete</a></li>
+</ul>

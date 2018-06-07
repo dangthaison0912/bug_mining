@@ -1,0 +1,7 @@
+<h1>{{ author.name}}</h1>
+Files edited:
+<ul>
+{% for file in author.files.all %}
+    <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }}</a></li>
+{% endfor %}
+</ul>

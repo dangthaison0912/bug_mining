@@ -52,17 +52,31 @@ def get_bugids():
                 ids.add(int(id.string))
         return list(ids)
 
+def get_gerrit_links(url):
+    response = simple_get(url)
+    links = set()
+    if response is not None:
+        html = BeautifulSoup(response, 'html.parser')
+        for a in html.findAll('a'):
+            a_string = a.string
+            if a_string is not None:
+                if 'https://chromium-review.googlesource.com/' in a_string:
+                    links.add(a_string)
+        return list(links)
 
 if __name__ == '__main__':
     print('Getting list of bug ids')
-    ids = get_bugids()
-    ids.sort()
-    ids.reverse()
-    file = open("bug_id.txt", "w")
-    file.write("\n".join(str(id) for id in ids))
-    file.close()
+    url = "https://bugs.chromium.org/p/chromium/issues/detail?id=845661"
+    links = get_gerrit_links(url)
+    # ids = get_bugids()
+    # ids.sort()
+    # ids.reverse()
+    # file = open("bug_id.txt", "w")
+    # file.write("\n".join(str(id) for id in ids))
+    # file.close()
+
     print('Done')
 
-    # for id in ids:
-    #     print(str(id) + '\n')
-    print('There are total {} bug ids found'.format(len(ids)))
+    for link in links:
+        print(link + '\n')
+    print('There are total {} bug ids found'.format(len(links)))

@@ -13,9 +13,16 @@ class Bug(models.Model):
 
 class File(models.Model):
     file_path =models.CharField(max_length=200)
+    last_updated = models.DateTimeField(default=datetime.now, blank=True)
+    involved = models.IntegerField(default=0)
+    total_changeset = models.IntegerField(default=0)
     bugs = models.ManyToManyField(Bug)
     added = models.IntegerField(default=0)
     deleted = models.IntegerField(default=0)
     #to String
     def __str__(self):
         return self.file_path
+
+class Author(models.Model):
+    author_name = models.CharField(max_length=200)
+    files = models.ManyToManyField(File)
