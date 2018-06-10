@@ -61,11 +61,13 @@ def get_code_metrics(url):
         commits = html.findAll('pre', {'class' : 'u-pre u-monospace MetadataMessage'})
         bugs = []
         print("There are ", len(commits)," commits")
+        print("There are ", len(diffs), " diffs")
         for commit in commits:
             list_of_bugids = ['-1']
             for line in commit.text.split("\n"):
-                if "bug" in line.lower():
+                if ("bug: " in line.lower()) or ("bug=" in line.lower()):
                     list_of_bugids = re.findall(r'\d+', line)
+                    print(" ".join(list_of_bugids))
             bugs.append(list_of_bugids)
         files_code_change = []
         file_paths = []

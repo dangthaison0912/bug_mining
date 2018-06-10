@@ -12,7 +12,7 @@ DELETED = 2
 CHANGESET = 3
 BUGS = 4
 def index(request):
-    file_list = File.objects.order_by('file_path')
+    file_list = File.objects.order_by('-involved')
     template = loader.get_template('mining_main/index.html')
     context = {
         'file_list' : file_list
@@ -108,7 +108,7 @@ def update_file_database(file_info, bug, changeset):
     return f
 
 def get_metrics_from_git(request):
-    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
+    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.117..66.0.3359.139?pretty=fuller&n=10000"
     release_number = get_release(url)
     print("Release number: ", release_number)
     try:
@@ -159,14 +159,18 @@ def update_files_from_git(file_info, release):
 def check_defects_in_next_release(request):
     # files_list = File.objects.filter(release__release_number='66.0.3359.170..66.0.3359.181
     files_list = File.objects.all()
-    file_path_list = []
+    file_path_list = set()
     for file in files_list:
-        file_path_list.append(file.file_path)
+        file_path_list.add(file.file_path)
+
+
+
     url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
     next_release_defects = check_vulnerability(url)
     files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
 
-    print_data(files_defects_map)
+
+    print_attributes(files_defects_map)
 
     template = loader.get_template('mining_main/result.html')
     context = {
@@ -200,7 +204,7 @@ def update_author_database(author_name, file):
     author.save()
     return author
 
-def print_data(files_defects_map):
+def print_defect_status(files_defects_map):
     defect_list = open("defect.txt", "w")
     non_defect_list = open("non-defect.txt", "w")
     is_defect = 0
@@ -218,3 +222,29 @@ def print_data(files_defects_map):
 
     defect_list.close()
     non_defect_list.close()
+
+def print_attributes(files_defects_map):
+    """
+    Get all the data of attributes needed for Naive Bayes Classifier
+    """
+
+    data_set = open("data_set.txt", "w")
+    file_attributes_list = []
+    for file in files_defects_map:
+        file_all_releases = File.objects.filter(file_path=file[PATH])
+        total_added = 0
+        total_deleted = 0
+        total_changeset = 0
+        total_involved = 0
+        for file_per_release in file_all_releases:
+            total_added += file_per_release.added
+            total_deleted += file_per_release.deleted
+            total_changeset += file_per_release.total_changeset
+            total_involved += file_per_release.involved
+        average_added = round(total_added/total_involved, 2)
+        average_deleted = round(total_deleted/total_involved, 2)
+        average_changset = round(total_changeset/total_involved, 2)
+        file_attributes = [file[PATH], str(average_added), str(average_deleted), str(average_changset), str(file[1])]
+        file_attributes_list.append(file_attributes)
+        data_set.write(" ".join(file_attributes) + "\n")
+    data_set.close()
