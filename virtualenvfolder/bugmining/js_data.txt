@@ -251,7 +251,7 @@
   </gr-smart-search>
         <gr-endpoint-decorator class="hideOnMobile style-scope gr-main-header" name="header-browse-source"></gr-endpoint-decorator>
         <div class="accountContainer style-scope gr-main-header" id="accountContainer">
-          <a class="loginButton style-scope gr-main-header" href="/login/%2Fc%2Fchromiumos%2Finfra%2Fskylab_inventory%2F%2B%2F1081179">Sign in</a>
+          <a class="loginButton style-scope gr-main-header" href="/login/%2Fc%2Fchromiumos%2Fthird_party%2Fkernel%2F%2B%2F1068486">Sign in</a>
           <a class="settingsButton style-scope gr-main-header" title="Settings" href="/settings/">
             <iron-icon icon="gr-icons:settings" class="style-scope gr-main-header x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" class="style-scope iron-icon"></path></g></svg>
     
@@ -292,8 +292,8 @@
               <gr-tooltip-content class="style-scope gr-dropdown x-scope gr-tooltip-content-0">
     
     
-                <span tabindex="-1" class="itemAction style-scope gr-dropdown" hidden="/switch-account/c/chromiumos/infra/skylab_inventory/+/1081179">Switch account</span>
-                <a class="itemAction style-scope gr-dropdown" tabindex="-1" rel="external" href="//chromium-review.googlesource.com/switch-account/c/chromiumos/infra/skylab_inventory/+/1081179">Switch account</a>
+                <span tabindex="-1" class="itemAction style-scope gr-dropdown" hidden="/switch-account/c/chromiumos/third_party/kernel/+/1068486">Switch account</span>
+                <a class="itemAction style-scope gr-dropdown" tabindex="-1" rel="external" href="//chromium-review.googlesource.com/switch-account/c/chromiumos/third_party/kernel/+/1068486">Switch account</a>
               <span class="arrow style-scope gr-tooltip-content" hidden="true">ⓘ</span>
   </gr-tooltip-content>
             </li>
@@ -330,7 +330,7 @@
       <template is="dom-if" restamp="true" class="style-scope gr-app"></template>
       <template is="dom-if" restamp="true" class="style-scope gr-app"></template>
       
-        <gr-change-view class="style-scope gr-app x-scope gr-change-view-0">
+        <gr-change-view class="style-scope gr-app x-scope gr-change-view-1">
     
     <div class="container loading style-scope gr-change-view" hidden="true">Loading...</div>
     <div id="mainContent" class="container style-scope gr-change-view">
@@ -367,7 +367,7 @@
     
     <div class="container style-scope gr-commit-info">
       
-        <a target="_blank" rel="noopener" class="style-scope gr-commit-info" href="https://chromium.googlesource.com/chromiumos/infra/skylab_inventory/+/f90676d9ae20373dc6513812e90bd203c37c391c">f90676d</a>
+        <a target="_blank" rel="noopener" class="style-scope gr-commit-info" href="https://chromium.googlesource.com/chromiumos/third_party/kernel/+/907691b4a170f674e248d0aaf690f7fe91e3dfbc">907691b</a>
       <template is="dom-if" class="style-scope gr-commit-info"></template>
       <template is="dom-if" class="style-scope gr-commit-info"></template>
       <gr-copy-clipboard has-tooltip="" button-title="Copy full SHA to clipboard" hide-input="" hide-label="" class="style-scope gr-commit-info x-scope gr-copy-clipboard-0">
@@ -388,9 +388,9 @@
             <template is="dom-if" class="style-scope gr-change-view"></template>
           </div>
           <span class="separator style-scope gr-change-view"></span>
-          <a class="style-scope gr-change-view" aria-label="Change 1081179" href="/c/chromiumos/infra/skylab_inventory/+/1081179">1081179</a>
+          <a class="style-scope gr-change-view" aria-label="Change 1068486" href="/c/chromiumos/third_party/kernel/+/1068486">1068486</a>
           <pre class="style-scope gr-change-view">: </pre>
-          <span class="headerSubject style-scope gr-change-view">Create servers with default status "primary".</span>
+          <span class="headerSubject style-scope gr-change-view">UPSTREAM: KVM: async_pf: make rcu irq exit if not triggered from idle task</span>
         </div>
         <div class="commitActions style-scope gr-change-view" hidden="true">
           <gr-change-actions id="actions" class="style-scope gr-change-view x-scope gr-change-actions-0" hidden="">
@@ -452,19 +452,19 @@
         <div id="rebaseOnTip" class="rebaseOption style-scope gr-confirm-rebase-dialog">
           <input id="rebaseOnTipInput" name="rebaseOptions" type="radio" class="style-scope gr-confirm-rebase-dialog">
           <label id="rebaseOnTipLabel" for="rebaseOnTipInput" class="style-scope gr-confirm-rebase-dialog">
-            Rebase on top of the master
-            branch<span class="style-scope gr-confirm-rebase-dialog" hidden="true">
+            Rebase on top of the chromeos-3.18
+            branch<span class="style-scope gr-confirm-rebase-dialog">
               (breaks relation chain)
             </span>
           </label>
         </div>
         <div id="tipUpToDateMsg" class="message style-scope gr-confirm-rebase-dialog">
-          Change is up to date with the target branch already (master)
+          Change is up to date with the target branch already (chromeos-3.18)
         </div>
         <div id="rebaseOnOther" class="rebaseOption style-scope gr-confirm-rebase-dialog">
           <input id="rebaseOnOtherInput" name="rebaseOptions" type="radio" class="style-scope gr-confirm-rebase-dialog">
           <label id="rebaseOnOtherLabel" for="rebaseOnOtherInput" class="style-scope gr-confirm-rebase-dialog">
-            Rebase on a specific change, ref, or commit <span class="style-scope gr-confirm-rebase-dialog" hidden="true">
+            Rebase on a specific change, ref, or commit <span class="style-scope gr-confirm-rebase-dialog">
               (breaks relation chain)
             </span>
           </label>
@@ -584,7 +584,7 @@
 
     
     
-    <div id="mirror" class="mirror-text style-scope iron-autogrow-textarea" aria-hidden="true">Create servers with default status "primary".<br><br>Support "atest server create" to create servers with STATUS_PRIMARY.<br><br>BUG=chromium:848394<br>TEST="atest server create"<br><br>Change-Id: I094f5089b9c677c3848465827dc3f3c0a64f4b3e<br>Reviewed-on: https://chromium-review.googlesource.com/1081179<br>Commit-Ready: Ningning Xia &lt;nxia@chromium.org&gt;<br>Tested-by: Ningning Xia &lt;nxia@chromium.org&gt;<br>Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;<br>(cherry picked from commit f90676d9ae20373dc6513812e90bd203c37c391c)&nbsp;</div>
+    <div id="mirror" class="mirror-text style-scope iron-autogrow-textarea" aria-hidden="true">UPSTREAM: KVM: async_pf: make rcu irq exit if not triggered from idle task<br><br>commit 337c017ccdf2653d0040099433fc1a2b1beb5926 upstream.<br><br> WARNING: CPU: 5 PID: 1242 at kernel/rcu/tree_plugin.h:323 rcu_note_context_switch+0x207/0x6b0<br> CPU: 5 PID: 1242 Comm: unity-settings- Not tainted 4.13.0-rc2+ #1<br> RIP: 0010:rcu_note_context_switch+0x207/0x6b0<br> Call Trace:<br>  __schedule+0xda/0xba0<br>  ? kvm_async_pf_task_wait+0x1b2/0x270<br>  schedule+0x40/0x90<br>  kvm_async_pf_task_wait+0x1cc/0x270<br>  ? prepare_to_swait+0x22/0x70<br>  do_async_page_fault+0x77/0xb0<br>  ? do_async_page_fault+0x77/0xb0&nbsp;</div>
 
     
     <div class="textarea-container fit style-scope iron-autogrow-textarea">
@@ -796,6 +796,38 @@
     
     <div class="dropdown-content style-scope gr-autocomplete-dropdown" slot="dropdown-content" id="suggestions" role="listbox">
       <ul class="style-scope gr-autocomplete-dropdown">
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown selected" aria-label="chromeos-3.18" data-index="0">chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-arkham-7077.113.B-chromeos-3.18" data-index="1">factory-arkham-7077.113.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-coral-10122.B-chromeos-3.18" data-index="2">factory-coral-10122.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-eve-9667.B-chromeos-3.18" data-index="3">factory-eve-9667.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-fizz-10167.B-chromeos-3.18" data-index="4">factory-fizz-10167.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-gale-8743.19.B-chromeos-3.18" data-index="5">factory-gale-8743.19.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-glados-7657.B-chromeos-3.18" data-index="6">factory-glados-7657.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-glados-7828.B-chromeos-3.18" data-index="7">factory-glados-7828.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-glados-7828.B-chromeos-3.18-old" data-index="8">factory-glados-7828.B-chromeos-3.18-old</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-gru-8557.B-chromeos-3.18" data-index="9">factory-gru-8557.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-gru-8652.B-chromeos-3.18" data-index="10">factory-gru-8652.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-gru-9017.B-chromeos-3.18" data-index="11">factory-gru-9017.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-oak-8141.B-chromeos-3.18" data-index="12">factory-oak-8141.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-oak-8182.B-chromeos-3.18" data-index="13">factory-oak-8182.B-chromeos-3.18</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-oak-8182.B-chromeos-3.18-old" data-index="14">factory-oak-8182.B-chromeos-3.18-old</li>
+        
+          <li tabindex="-1" role="option" class="style-scope gr-autocomplete-dropdown" aria-label="factory-poppy-10504.B-chromeos-3.18" data-index="15">factory-poppy-10504.B-chromeos-3.18</li>
         <template is="dom-repeat" class="style-scope gr-autocomplete-dropdown"></template>
       </ul>
     </div>
@@ -897,7 +929,7 @@
             Are you sure you want to to <strong class="style-scope gr-change-actions">submit</strong> this change?
           </p>
           <p class="changeSubject style-scope gr-change-actions">
-            <strong class="style-scope gr-change-actions">Create servers with default status "primary".</strong>
+            <strong class="style-scope gr-change-actions">UPSTREAM: KVM: async_pf: make rcu irq exit if not triggered from idle task</strong>
           </p>
         </div></main>
       <footer class="style-scope gr-confirm-dialog">
@@ -926,10 +958,10 @@
       <section class="style-scope gr-change-metadata">
         <span class="title style-scope gr-change-metadata">Updated</span>
         <span class="value style-scope gr-change-metadata">
-          <gr-date-formatter has-tooltip="" class="style-scope gr-change-metadata x-scope gr-date-formatter-0" title="Jun 01, 2018, 21:45:43 UTC+00:00">
+          <gr-date-formatter has-tooltip="" class="style-scope gr-change-metadata x-scope gr-date-formatter-0" title="May 23, 2018, 23:50:01 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01
+      May 23
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -941,21 +973,21 @@
           <gr-account-link class="style-scope gr-change-metadata x-scope gr-account-link-0">
     
     <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:nxia%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
+      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:sonnyrao%2540chromium.org">
+        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" hidden="">
+        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s32-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
+          Sonny Rao</span>
         <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
+          (sonnyrao@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
@@ -978,7 +1010,7 @@
     
     <span class="style-scope gr-account-label">
       
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" hidden="">
+        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-HzfBB4sO-vc/AAAAAAAAAAI/AAAAAAAAAAA/pbkxEyugUb0/s32-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
@@ -1063,84 +1095,6 @@
           <span class="value style-scope gr-change-metadata">
             <gr-reviewer-list reviewers-only="" class="style-scope gr-change-metadata x-scope gr-reviewer-list-0">
     
-    
-      <gr-account-chip class="reviewer style-scope gr-reviewer-list x-scope gr-account-chip-0" show-avatar="">
-    
-    <div class="container  style-scope gr-account-chip">
-      <gr-account-link class="style-scope gr-account-chip x-scope gr-account-link-0">
-    
-    <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:jrbarnette%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" has-tooltip="" title="Richard Barnette <jrbarnette@chromium.org>">
-    
-    <span class="style-scope gr-account-label">
-      
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-RAA4AQsR4xk/AAAAAAAAAAI/AAAAAAAAAAA/UNQkqedFZFg/s32-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Richard Barnette</span>
-        <span class="email style-scope gr-account-label">
-          (jrbarnette@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-      </a>
-    </span>
-  </gr-account-link>
-      <gr-button id="remove" link="" hidden="true" tabindex="-1" aria-label="Remove" class="remove  style-scope gr-account-chip x-scope gr-button-9" role="button"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-        <iron-icon icon="gr-icons:close" class="style-scope gr-account-chip x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
-    
-  </iron-icon>
-      <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-chip"></gr-rest-api-interface>
-  </gr-account-chip>
-    
-      <gr-account-chip class="reviewer style-scope gr-reviewer-list x-scope gr-account-chip-0" show-avatar="">
-    
-    <div class="container  style-scope gr-account-chip">
-      <gr-account-link class="style-scope gr-account-chip x-scope gr-account-link-0">
-    
-    <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:xixuan%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" has-tooltip="" title="Xixuan Wu <xixuan@chromium.org> Votable: Code-Review, Commit-Queue, Verified, Trybot-Ready">
-    
-    <span class="style-scope gr-account-label">
-      
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-95nN_9De_Uk/AAAAAAAAAAI/AAAAAAAAAAA/J9FUi_N-5jM/s32-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Xixuan Wu</span>
-        <span class="email style-scope gr-account-label">
-          (xixuan@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-      </a>
-    </span>
-  </gr-account-link>
-      <gr-button id="remove" link="" hidden="true" tabindex="-1" aria-label="Remove" class="remove  style-scope gr-account-chip x-scope gr-button-9" role="button"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-        <iron-icon icon="gr-icons:close" class="style-scope gr-account-chip x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
-    
-  </iron-icon>
-      <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-chip"></gr-rest-api-interface>
-  </gr-account-chip>
     <template is="dom-repeat" as="reviewer" class="style-scope gr-reviewer-list"></template>
     <gr-button class="hiddenReviewers style-scope gr-reviewer-list x-scope gr-button-5" link="" role="button" tabindex="0" hidden="true"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">and 0 more<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
     <div class="controlsContainer style-scope gr-reviewer-list" hidden="true">
@@ -1208,16 +1162,16 @@
       <section class="style-scope gr-change-metadata">
         <span class="title style-scope gr-change-metadata">Project</span>
         <span class="value style-scope gr-change-metadata">
-          <a class="style-scope gr-change-metadata" href="/q/project:chromiumos%252Finfra%252Fskylab_inventory">
-            <gr-limited-text limit="40" class="style-scope gr-change-metadata">chromiumos/infra/skylab_inventory</gr-limited-text>
+          <a class="style-scope gr-change-metadata" href="/q/project:chromiumos%252Fthird_party%252Fkernel">
+            <gr-limited-text limit="40" class="style-scope gr-change-metadata">chromiumos/third_party/kernel</gr-limited-text>
           </a>
         </span>
       </section>
       <section class="style-scope gr-change-metadata">
         <span class="title style-scope gr-change-metadata">Branch</span>
         <span class="value style-scope gr-change-metadata">
-          <a class="style-scope gr-change-metadata" href="/q/project:chromiumos%252Finfra%252Fskylab_inventory+branch:master+status:merged">
-            <gr-limited-text limit="40" class="style-scope gr-change-metadata">master</gr-limited-text>
+          <a class="style-scope gr-change-metadata" href="/q/project:chromiumos%252Fthird_party%252Fkernel+branch:chromeos-3.18+status:merged">
+            <gr-limited-text limit="40" class="style-scope gr-change-metadata">chromeos-3.18</gr-limited-text>
           </a>
         </span>
       </section>
@@ -1231,7 +1185,7 @@
     
     <div class="container style-scope gr-commit-info">
       
-        <a target="_blank" rel="noopener" class="style-scope gr-commit-info" href="https://chromium.googlesource.com/chromiumos/infra/skylab_inventory/+/7a2ef46dbe05a92159ff3b40c41d66f64ba73d3e">7a2ef46</a>
+        <a target="_blank" rel="noopener" class="style-scope gr-commit-info" href="https://chromium.googlesource.com/chromiumos/third_party/kernel/+/3f5691f1f62a07d661d73cbcea23dbf4a843cad2">3f5691f</a>
       <template is="dom-if" class="style-scope gr-commit-info"></template>
       <template is="dom-if" class="style-scope gr-commit-info"></template>
       <gr-copy-clipboard has-tooltip="" button-title="Copy full SHA to clipboard" hide-input="" hide-label="" class="style-scope gr-commit-info x-scope gr-copy-clipboard-0">
@@ -1429,25 +1383,58 @@
               <div class="replyContainer style-scope gr-change-view">
                   <gr-button id="replyBtn" class="reply style-scope gr-change-view x-scope gr-button-8" primary="" role="button" tabindex="0" hidden="true"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="1" raised="" style="">Reply<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
               </div>
-              <div id="commitMessage" class="commitMessage  style-scope gr-change-view">
+              <div id="commitMessage" class="commitMessage collapsed style-scope gr-change-view">
                 <gr-editable-content id="commitMessageEditor" remove-zero-width-space="" class="style-scope gr-change-view x-scope gr-editable-content-0">
     
     <div class="style-scope gr-editable-content">
       
                   <gr-linked-text pre="" remove-zero-width-space="" class="style-scope gr-change-view x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Create servers with default status "primary".
+    <span id="output" class="style-scope gr-linked-text">UPSTREAM: KVM: async_pf: make rcu irq exit if not triggered from idle task
 
-Support "atest server create" to create servers with STATUS_PRIMARY.
+commit 337c017ccdf2653d0040099433fc1a2b1beb5926 upstream.
 
-BUG=chromium:848394
-TEST="atest server create"
+ WARNING: CPU: 5 PID: 1242 at kernel/rcu/tree_plugin.h:323 rcu_note_context_switch+0x207/0x6b0
+ CPU: 5 PID: 1242 Comm: unity-settings- Not tainted 4.13.0-rc2+ #1
+ RIP: 0010:rcu_note_context_switch+0x207/0x6b0
+ Call Trace:
+  __schedule+0xda/0xba0
+  ? kvm_async_pf_task_wait+0x1b2/0x270
+  schedule+0x40/0x90
+  kvm_async_pf_task_wait+0x1cc/0x270
+  ? prepare_to_swait+0x22/0x70
+  do_async_page_fault+0x77/0xb0
+  ? do_async_page_fault+0x77/0xb0
+  async_page_fault+0x28/0x30
+ RIP: 0010:__d_lookup_rcu+0x90/0x1e0
 
-Change-Id: I094f5089b9c677c3848465827dc3f3c0a64f4b3e
-Reviewed-on: https://chromium-review.googlesource.com/1081179
-Commit-Ready: Ningning Xia &lt;nxia@chromium.org&gt;
-Tested-by: Ningning Xia &lt;nxia@chromium.org&gt;
-Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
+I encounter this when trying to stress the async page fault in L1 guest w/
+L2 guests running.
+
+Commit 9b132fbe5419 (Add rcu user eqs exception hooks for async page
+fault) adds rcu_irq_enter/exit() to kvm_async_pf_task_wait() to exit cpu
+idle eqs when needed, to protect the code that needs use rcu.  However,
+we need to call the pair even if the function calls schedule(), as seen
+from the above backtrace.
+
+This patch fixes it by informing the RCU subsystem exit/enter the irq
+towards/away from idle for both n.halted and !n.halted.
+
+BUG=<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=842936" target="_blank" rel="noopener" class="style-scope gr-linked-text">chromium:842936</a>
+TEST=build/boot on caroline with USE=kvm_host
+
+Change-Id: <a href="/q/I2974ae190d9cb2a700c20ed1d3a1797fadfd6a41" target="_blank" rel="noopener" class="style-scope gr-linked-text">I2974ae190d9cb2a700c20ed1d3a1797fadfd6a41</a>
+Cc: Paolo Bonzini &lt;<a href="mailto:pbonzini@redhat.com" target="_blank" rel="noopener" class="style-scope gr-linked-text">pbonzini@redhat.com</a>&gt;
+Cc: Radim Krm &lt;<a href="mailto:rkrcmar@redhat.com" target="_blank" rel="noopener" class="style-scope gr-linked-text">rkrcmar@redhat.com</a>&gt;
+Cc: Paul E. McKenney &lt;<a href="mailto:paulmck@linux.vnet.ibm.com" target="_blank" rel="noopener" class="style-scope gr-linked-text">paulmck@linux.vnet.ibm.com</a>&gt;
+Signed-off-by: Wanpeng Li &lt;<a href="http://wanpeng.li" target="_blank" rel="noopener" class="style-scope gr-linked-text">wanpeng.li</a>@<a href="http://hotmail.com" target="_blank" rel="noopener" class="style-scope gr-linked-text">hotmail.com</a>&gt;
+Reviewed-by: Paolo Bonzini &lt;<a href="mailto:pbonzini@redhat.com" target="_blank" rel="noopener" class="style-scope gr-linked-text">pbonzini@redhat.com</a>&gt;
+Signed-off-by: Radim Krm &lt;<a href="mailto:rkrcmar@redhat.com" target="_blank" rel="noopener" class="style-scope gr-linked-text">rkrcmar@redhat.com</a>&gt;
+Signed-off-by: Greg Kroah-Hartman &lt;<a href="mailto:gregkh@linuxfoundation.org" target="_blank" rel="noopener" class="style-scope gr-linked-text">gregkh@linuxfoundation.org</a>&gt;
+(cherry picked from commit 4110ee7ebb2bc8120f7bf767bc6bd29a30b60912
+ in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/" target="_blank" rel="noopener" class="style-scope gr-linked-text">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/</a>)
+Signed-off-by: Sonny Rao &lt;<a href="mailto:sonnyrao@chromium.org" target="_blank" rel="noopener" class="style-scope gr-linked-text">sonnyrao@chromium.org</a>&gt;
+Reviewed-on: <a href="https://chromium-review.googlesource.com/1068486" target="_blank" rel="noopener" class="style-scope gr-linked-text">https://chromium-review.googlesource.com/1068486</a>
 </span>
   </gr-linked-text>
                 
@@ -1477,23 +1464,401 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
                   <hr class="style-scope gr-change-view">
                   Change-Id:
                   <span class="style-scope gr-change-view">
-                    I094f5089b9c677c3848465827dc3f3c0a64f4b3e
+                    I2974ae190d9cb2a700c20ed1d3a1797fadfd6a41
                   </span>
                 </div>
               </div>
-              <div id="commitCollapseToggle" class="collapseToggleContainer style-scope gr-change-view" hidden="true">
+              <div id="commitCollapseToggle" class="collapseToggleContainer style-scope gr-change-view">
                 <gr-button link="" id="commitCollapseToggleButton" class="collapseToggleButton style-scope gr-change-view x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
                   ▼ Show more
                 <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
               </div>
             </div>
             <div class="relatedChanges style-scope gr-change-view">
-              <gr-related-changes-list id="relatedChanges" class="collapsed style-scope gr-change-view x-scope gr-related-changes-list-0" hidden="">
+              <gr-related-changes-list id="relatedChanges" class="collapsed style-scope gr-change-view x-scope gr-related-changes-list-0">
     
     <div class="style-scope gr-related-changes-list">
       <hr class="mobile style-scope gr-related-changes-list">
-      <section class="relatedChanges style-scope gr-related-changes-list" hidden="true">
+      <section class="relatedChanges style-scope gr-related-changes-list">
         <h4 class="style-scope gr-related-changes-list">Relation chain</h4>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: X86: Fix load RFLAGS w/o the fixed bit" href="/c/chromiumos/third_party/kernel/+/1068506/2">
+              UPSTREAM: KVM: X86: Fix load RFLAGS w/o the fixed bit
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: x86: correct async page present tracepoint" href="/c/chromiumos/third_party/kernel/+/1068505/2">
+              UPSTREAM: KVM: x86: correct async page present tracepoint
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: nVMX: reset nested_run_pending if the vCPU is going to be reset" href="/c/chromiumos/third_party/kernel/+/1068504/2">
+              UPSTREAM: KVM: nVMX: reset nested_run_pending if the vCPU is going to be reset
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: VMX: remove I/O port 0x80 bypass on Intel hosts" href="/c/chromiumos/third_party/kernel/+/1068503/2">
+              UPSTREAM: KVM: VMX: remove I/O port 0x80 bypass on Intel hosts
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/PCI: Make broadcom_postcore_init() check acpi_disabled" href="/c/chromiumos/third_party/kernel/+/1068502/2">
+              UPSTREAM: x86/PCI: Make broadcom_postcore_init() check acpi_disabled
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: x86: inject exceptions produced by x86_decode_insn" href="/c/chromiumos/third_party/kernel/+/1068501/2">
+              UPSTREAM: KVM: x86: inject exceptions produced by x86_decode_insn
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: x86: Exit to user-mode on #UD intercept when emulator requires" href="/c/chromiumos/third_party/kernel/+/1068500/2">
+              UPSTREAM: KVM: x86: Exit to user-mode on #UD intercept when emulator requires
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: SVM: obey guest PAT" href="/c/chromiumos/third_party/kernel/+/1068499/2">
+              UPSTREAM: KVM: SVM: obey guest PAT
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: nVMX: set IDTR and GDTR limits when loading L1 host state" href="/c/chromiumos/third_party/kernel/+/1068498/2">
+              UPSTREAM: KVM: nVMX: set IDTR and GDTR limits when loading L1 host state
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/decoder: Add new TEST instruction pattern" href="/c/chromiumos/third_party/kernel/+/1068497/2">
+              UPSTREAM: x86/decoder: Add new TEST instruction pattern
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: security/keys: add CONFIG_KEYS_COMPAT to Kconfig" href="/c/chromiumos/third_party/kernel/+/1068496/2">
+              UPSTREAM: security/keys: add CONFIG_KEYS_COMPAT to Kconfig
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/oprofile/ppro: Do not use __this_cpu*() in preemptible context" href="/c/chromiumos/third_party/kernel/+/1068495/2">
+              UPSTREAM: x86/oprofile/ppro: Do not use __this_cpu*() in preemptible context
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: crypto: x86/sha1-mb - fix panic due to unaligned access" href="/c/chromiumos/third_party/kernel/+/1068494/2">
+              UPSTREAM: crypto: x86/sha1-mb - fix panic due to unaligned access
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/microcode/intel: Disable late loading on model 79" href="/c/chromiumos/third_party/kernel/+/1068493/2">
+              UPSTREAM: x86/microcode/intel: Disable late loading on model 79
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: nVMX: fix guest CR4 loading when emulating L2 to L1 exit" href="/c/chromiumos/third_party/kernel/+/1068492/2">
+              UPSTREAM: KVM: nVMX: fix guest CR4 loading when emulating L2 to L1 exit
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/fpu: Don't let userspace set bogus xcomp_bv" href="/c/chromiumos/third_party/kernel/+/1068491/2">
+              UPSTREAM: x86/fpu: Don't let userspace set bogus xcomp_bv
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/tools: Fix gcc-7 warning in relocs.c" href="/c/chromiumos/third_party/kernel/+/1068490/2">
+              UPSTREAM: x86/tools: Fix gcc-7 warning in relocs.c
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86-64: Handle PC-relative relocations on per-CPU data" href="/c/chromiumos/third_party/kernel/+/1068489/2">
+              UPSTREAM: x86-64: Handle PC-relative relocations on per-CPU data
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/io: Add &quot;memory&quot; clobber to insb/insw/insl/outsb/outsw/outsl" href="/c/chromiumos/third_party/kernel/+/1068488/2">
+              UPSTREAM: x86/io: Add "memory" clobber to insb/insw/insl/outsb/outsw/outsl
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/boot: Add missing declaration of string functions" href="/c/chromiumos/third_party/kernel/+/1068487/2">
+              UPSTREAM: x86/boot: Add missing declaration of string functions
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer thisChange style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: async_pf: make rcu irq exit if not triggered from idle task" href="/c/chromiumos/third_party/kernel/+/1068486/2">
+              UPSTREAM: KVM: async_pf: make rcu irq exit if not triggered from idle task
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/mce/AMD: Make the init code more robust" href="/c/chromiumos/third_party/kernel/+/1068485/2">
+              UPSTREAM: x86/mce/AMD: Make the init code more robust
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/acpi: Prevent out of bound access caused by broken ACPI tables" href="/c/chromiumos/third_party/kernel/+/1068484/2">
+              UPSTREAM: x86/acpi: Prevent out of bound access caused by broken ACPI tables
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/rtc: Remove duplicate const specifier" href="/c/chromiumos/third_party/kernel/+/1068483/2">
+              UPSTREAM: x86/rtc: Remove duplicate const specifier
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: crypto: sha1-ssse3 - Disable avx2" href="/c/chromiumos/third_party/kernel/+/1068482/2">
+              UPSTREAM: crypto: sha1-ssse3 - Disable avx2
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: nVMX: Fix exception injection" href="/c/chromiumos/third_party/kernel/+/1068481/2">
+              UPSTREAM: KVM: nVMX: Fix exception injection
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: x86: zero base3 of unusable segments" href="/c/chromiumos/third_party/kernel/+/1068480/2">
+              UPSTREAM: KVM: x86: zero base3 of unusable segments
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/mm/32: Set the '__vmalloc_start_set' flag in initmem_init()" href="/c/chromiumos/third_party/kernel/+/1068479/2">
+              UPSTREAM: x86/mm/32: Set the '__vmalloc_start_set' flag in initmem_init()
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: KVM: cpuid: Fix read/write out-of-bounds vulnerability in cpuid emulation" href="/c/chromiumos/third_party/kernel/+/1068478/2">
+              UPSTREAM: KVM: cpuid: Fix read/write out-of-bounds vulnerability in cpuid emulation
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: kvm: async_pf: fix rcu_irq_enter() with irqs enabled" href="/c/chromiumos/third_party/kernel/+/1068477/2">
+              UPSTREAM: kvm: async_pf: fix rcu_irq_enter() with irqs enabled
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: um: Fix PTRACE_POKEUSER on x86_64" href="/c/chromiumos/third_party/kernel/+/1068476/2">
+              UPSTREAM: um: Fix PTRACE_POKEUSER on x86_64
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/boot: Fix BSS corruption/overwrite bug in early x86 kernel startup" href="/c/chromiumos/third_party/kernel/+/1068475/2">
+              UPSTREAM: x86/boot: Fix BSS corruption/overwrite bug in early x86 kernel startup
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: Revert &quot;KVM: nested VMX: disable perf cpuid reporting&quot;" href="/c/chromiumos/third_party/kernel/+/1068474/2">
+              UPSTREAM: Revert "KVM: nested VMX: disable perf cpuid reporting"
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/platform/intel-mid: Correct MSI IRQ line for watchdog device" href="/c/chromiumos/third_party/kernel/+/1068473/2">
+              UPSTREAM: x86/platform/intel-mid: Correct MSI IRQ line for watchdog device
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: kprobes/x86: Fix kernel panic when certain exception-handling addresses are probed" href="/c/chromiumos/third_party/kernel/+/1068472/2">
+              UPSTREAM: kprobes/x86: Fix kernel panic when certain exception-handling addresses are probed
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/pci-calgary: Fix iommu_free() comparison of unsigned expression >= 0" href="/c/chromiumos/third_party/kernel/+/1068471/2">
+              UPSTREAM: x86/pci-calgary: Fix iommu_free() comparison of unsigned expression &gt;= 0
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: ftrace/x86: Fix triple fault with graph tracing and suspend-to-ram" href="/c/chromiumos/third_party/kernel/+/1068470/2">
+              UPSTREAM: ftrace/x86: Fix triple fault with graph tracing and suspend-to-ram
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: xen/x86: don't lose event interrupts" href="/c/chromiumos/third_party/kernel/+/1068469/2">
+              UPSTREAM: xen/x86: don't lose event interrupts
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: kconfig: tinyconfig: provide whole choice blocks to avoid warnings" href="/c/chromiumos/third_party/kernel/+/1068468/2">
+              UPSTREAM: kconfig: tinyconfig: provide whole choice blocks to avoid warnings
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: x86/mce/AMD: Give a name to MCA bank 3 when accessed with legacy MSRs" href="/c/chromiumos/third_party/kernel/+/1068467/2">
+              UPSTREAM: x86/mce/AMD: Give a name to MCA bank 3 when accessed with legacy MSRs
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: mm: Tighten x86 /dev/mem with zeroing reads" href="/c/chromiumos/third_party/kernel/+/1068466/2">
+              UPSTREAM: mm: Tighten x86 /dev/mem with zeroing reads
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
+        
+          <div class="rightIndent changeContainer style-scope gr-related-changes-list">
+            <a class="style-scope gr-related-changes-list" title="UPSTREAM: kvm: fix page struct leak in handle_vmon" href="/c/chromiumos/third_party/kernel/+/1068465/2">
+              UPSTREAM: kvm: fix page struct leak in handle_vmon
+            </a>
+            <span class="status style-scope gr-related-changes-list">
+              (Merged)
+            </span>
+          </div>
         <template is="dom-repeat" as="related" class="style-scope gr-related-changes-list"></template>
       </section>
       <section hidden="true" class="style-scope gr-related-changes-list">
@@ -1513,10 +1878,10 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         <template is="dom-repeat" as="change" class="style-scope gr-related-changes-list"></template>
       </section>
     </div>
-    <div class="style-scope gr-related-changes-list">Loading...</div>
+    <div class="style-scope gr-related-changes-list" hidden="true">Loading...</div>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-related-changes-list"></gr-rest-api-interface>
   </gr-related-changes-list>
-              <div id="relatedChangesToggle" class="collapseToggleContainer style-scope gr-change-view">
+              <div id="relatedChangesToggle" class="collapseToggleContainer style-scope gr-change-view showToggle">
                 <gr-button link="" id="relatedChangesToggleButton" class="collapseToggleButton style-scope gr-change-view x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
                   ▼ Show more
                 <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
@@ -1553,31 +1918,12 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     
     
             <div class="topContent style-scope gr-dropdown-list">
-              <div class="style-scope gr-dropdown-list">Patchset 3</div>
-              
-                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="Jun 01, 2018, 21:45:43 UTC+00:00">
-    
-    <span class="style-scope gr-date-formatter">
-      Jun 01
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
-  </gr-date-formatter>
-              <template is="dom-if" class="style-scope gr-dropdown-list"></template>
-            </div>
-            <template is="dom-if" class="style-scope gr-dropdown-list"></template>
-          
-  </paper-item>
-        
-          <paper-item class="style-scope gr-dropdown-list x-scope paper-item-0" role="option" tabindex="-1" aria-disabled="false">
-    
-    
-            <div class="topContent style-scope gr-dropdown-list">
               <div class="style-scope gr-dropdown-list">Patchset 2</div>
               
-                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 31, 2018, 20:32:21 UTC+00:00">
+                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 23, 2018, 23:50:01 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      May 31
+      May 23
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -1593,10 +1939,10 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
             <div class="topContent style-scope gr-dropdown-list">
               <div class="style-scope gr-dropdown-list">Patchset 1</div>
               
-                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 31, 2018, 20:28:47 UTC+00:00">
+                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 22, 2018, 02:18:14 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      May 31
+      May 22
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -1624,11 +1970,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     <gr-select class="style-scope gr-dropdown-list">
       <select class="style-scope gr-dropdown-list">
         
-          <option class="style-scope gr-dropdown-list" value="3" disabled="true">
-            3
-          </option>
-        
-          <option class="style-scope gr-dropdown-list" value="2">
+          <option class="style-scope gr-dropdown-list" value="2" disabled="true">
             2
           </option>
         
@@ -1652,7 +1994,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
       <gr-dropdown-list id="patchNumDropdown" class="style-scope gr-patch-range-select x-scope gr-dropdown-list-0">
     
     <gr-button down-arrow="" link="" id="trigger" class="dropdown-trigger style-scope gr-dropdown-list x-scope gr-button-6" slot="dropdown-trigger" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-      <span id="triggerText" class="style-scope gr-dropdown-list">Patchset 3</span>
+      <span id="triggerText" class="style-scope gr-dropdown-list">Patchset 2</span>
     <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
     <iron-dropdown id="dropdown" vertical-align="top" allow-outside-scroll="true" class="style-scope gr-dropdown-list" aria-disabled="false" aria-hidden="true" horizontal-align="left" style="outline: none; display: none;">
     
@@ -1667,31 +2009,12 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     
     
             <div class="topContent style-scope gr-dropdown-list">
-              <div class="style-scope gr-dropdown-list">Patchset 3</div>
-              
-                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="Jun 01, 2018, 21:45:43 UTC+00:00">
-    
-    <span class="style-scope gr-date-formatter">
-      Jun 01
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
-  </gr-date-formatter>
-              <template is="dom-if" class="style-scope gr-dropdown-list"></template>
-            </div>
-            <template is="dom-if" class="style-scope gr-dropdown-list"></template>
-          
-  </paper-item>
-        
-          <paper-item class="style-scope gr-dropdown-list x-scope paper-item-0" role="option" tabindex="-1" aria-disabled="false">
-    
-    
-            <div class="topContent style-scope gr-dropdown-list">
               <div class="style-scope gr-dropdown-list">Patchset 2</div>
               
-                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 31, 2018, 20:32:21 UTC+00:00">
+                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 23, 2018, 23:50:01 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      May 31
+      May 23
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -1707,10 +2030,10 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
             <div class="topContent style-scope gr-dropdown-list">
               <div class="style-scope gr-dropdown-list">Patchset 1</div>
               
-                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 31, 2018, 20:28:47 UTC+00:00">
+                  <gr-date-formatter class="style-scope gr-dropdown-list x-scope gr-date-formatter-0" title="May 22, 2018, 02:18:14 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      May 31
+      May 22
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -1726,10 +2049,6 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
   </iron-dropdown>
     <gr-select class="style-scope gr-dropdown-list">
       <select class="style-scope gr-dropdown-list">
-        
-          <option class="style-scope gr-dropdown-list" value="3">
-            3
-          </option>
         
           <option class="style-scope gr-dropdown-list" value="2">
             2
@@ -1752,7 +2071,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     
     <div class="container style-scope gr-commit-info">
       
-        <a target="_blank" rel="noopener" class="style-scope gr-commit-info" href="https://chromium.googlesource.com/chromiumos/infra/skylab_inventory/+/f90676d9ae20373dc6513812e90bd203c37c391c">f90676d</a>
+        <a target="_blank" rel="noopener" class="style-scope gr-commit-info" href="https://chromium.googlesource.com/chromiumos/third_party/kernel/+/907691b4a170f674e248d0aaf690f7fe91e3dfbc">907691b</a>
       <template is="dom-if" class="style-scope gr-commit-info"></template>
       <template is="dom-if" class="style-scope gr-commit-info"></template>
       <gr-copy-clipboard has-tooltip="" button-title="Copy full SHA to clipboard" hide-input="" hide-label="" class="style-scope gr-commit-info x-scope gr-copy-clipboard-0">
@@ -1772,7 +2091,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
   </gr-commit-info>
           <span class="container latestPatchContainer style-scope gr-file-list-header">
             <span class="separator style-scope gr-file-list-header"></span>
-            <a class="style-scope gr-file-list-header" href="/c/chromiumos/infra/skylab_inventory/+/1081179">Go to latest patch set</a>
+            <a class="style-scope gr-file-list-header" href="/c/chromiumos/third_party/kernel/+/1068486">Go to latest patch set</a>
           </span>
           <span class="container descriptionContainer hideOnEdit style-scope gr-file-list-header">
             <span class="separator style-scope gr-file-list-header"></span>
@@ -2087,7 +2406,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
               A
             </div>
             <span class="path style-scope gr-file-list">
-              <a class="pathLink style-scope gr-file-list" href="/c/chromiumos/infra/skylab_inventory/+/1081179/3//COMMIT_MSG">
+              <a class="pathLink style-scope gr-file-list" href="/c/chromiumos/third_party/kernel/+/1068486/2//COMMIT_MSG">
                 <span class="fullFileName style-scope gr-file-list" title="Commit message">
                   Commit message
                 </span>
@@ -2118,14 +2437,14 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
               </svg>
             </div>
             <div class="stats invisible style-scope gr-file-list">
-              <span class="added style-scope gr-file-list" tabindex="0" aria-label="18 lines added">
-                +18
+              <span class="added style-scope gr-file-list" tabindex="0" aria-label="51 lines added">
+                +51
               </span>
               <span class="removed style-scope gr-file-list" tabindex="0" aria-label="0 lines removed">
                 -0
               </span>
               <span class="added style-scope gr-file-list" hidden="true">
-                +682 B
+                +2.1 KiB
                 
               </span>
             </div>
@@ -2153,17 +2472,17 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
       
         
         <div class="stickyArea style-scope gr-file-list">
-          <div tabindex="-1" class="file-row row  style-scope gr-file-list" data-path="venv/skylab_inventory/lib/server.py">
+          <div tabindex="-1" class="file-row row  style-scope gr-file-list" data-path="arch/x86/kernel/kvm.c">
               <div tabindex="0" class="status style-scope gr-file-list" aria-label="Status Unknown">
               M
             </div>
             <span class="path style-scope gr-file-list">
-              <a class="pathLink style-scope gr-file-list" href="/c/chromiumos/infra/skylab_inventory/+/1081179/3/venv/skylab_inventory/lib/server.py">
-                <span class="fullFileName style-scope gr-file-list" title="venv/skylab_inventory/lib/server.py">
-                  venv/skylab_inventory/lib/server.py
+              <a class="pathLink style-scope gr-file-list" href="/c/chromiumos/third_party/kernel/+/1068486/2/arch/x86/kernel/kvm.c">
+                <span class="fullFileName style-scope gr-file-list" title="arch/x86/kernel/kvm.c">
+                  arch/x86/kernel/kvm.c
                 </span>
-                <span class="truncatedFileName style-scope gr-file-list" title="venv/skylab_inventory/lib/server.py">
-                  …/server.py
+                <span class="truncatedFileName style-scope gr-file-list" title="arch/x86/kernel/kvm.c">
+                  …/kvm.c
                 </span>
               </a>
               <div class="oldPath style-scope gr-file-list" hidden="true">
@@ -2189,15 +2508,15 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
               </svg>
             </div>
             <div class="stats style-scope gr-file-list">
-              <span class="added style-scope gr-file-list" tabindex="0" aria-label="2 lines added">
-                +2
+              <span class="added style-scope gr-file-list" tabindex="0" aria-label="4 lines added">
+                +4
               </span>
-              <span class="removed style-scope gr-file-list" tabindex="0" aria-label="1 lines removed">
-                -1
+              <span class="removed style-scope gr-file-list" tabindex="0" aria-label="2 lines removed">
+                -2
               </span>
-              <span class="added style-scope gr-file-list" hidden="true">
-                +54 B
-                (+1%)
+              <span class="style-scope gr-file-list" hidden="true">
+                +/-0 B
+                (-0%)
               </span>
             </div>
             <div class="reviewed hideOnEdit style-scope gr-file-list" hidden="true">
@@ -2211,8 +2530,8 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
               <template is="dom-if" class="style-scope gr-file-list"></template>
             </div>
             <div class="show-hide style-scope gr-file-list">
-              <label class="show-hide style-scope gr-file-list" data-expand="true" data-path="venv/skylab_inventory/lib/server.py">
-                <input type="checkbox" class="show-hide style-scope gr-file-list" data-expand="true" data-path="venv/skylab_inventory/lib/server.py">
+              <label class="show-hide style-scope gr-file-list" data-expand="true" data-path="arch/x86/kernel/kvm.c">
+                <input type="checkbox" class="show-hide style-scope gr-file-list" data-expand="true" data-path="arch/x86/kernel/kvm.c">
                   <iron-icon id="icon" class="style-scope gr-file-list x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" class="style-scope iron-icon"></path></g></svg>
     
   </iron-icon>
@@ -2225,11 +2544,11 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     </div>
     <div class="row totalChanges style-scope gr-file-list">
       <div class="total-stats style-scope gr-file-list">
-        <span class="added style-scope gr-file-list" tabindex="0" aria-label="2 lines added">
-          +2
+        <span class="added style-scope gr-file-list" tabindex="0" aria-label="4 lines added">
+          +4
         </span>
-        <span class="removed style-scope gr-file-list" tabindex="0" aria-label="1 lines removed">
-          -1
+        <span class="removed style-scope gr-file-list" tabindex="0" aria-label="2 lines removed">
+          -2
         </span>
       </div>
       
@@ -2341,19 +2660,23 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         </gr-endpoint-param>
         <gr-endpoint-param name="revision" class="style-scope gr-change-view">
         </gr-endpoint-param>
-      <cr-buildbucket-view class="style-scope gr-endpoint-decorator x-scope cr-buildbucket-view-0">
+      <tricium-view class="style-scope gr-endpoint-decorator x-scope tricium-view-0">
     
-    <div class="style-scope cr-buildbucket-view">
+    <template is="dom-if" class="style-scope tricium-view"></template>
+    <tricium-client id="client" class="style-scope tricium-view"></tricium-client>
+  </tricium-view><cr-buildbucket-view class="style-scope gr-endpoint-decorator x-scope cr-buildbucket-view-0">
+    
+    <div class="style-scope cr-buildbucket-view" hidden="true">
       <div class="header container style-scope cr-buildbucket-view">
         <div class="container style-scope cr-buildbucket-view">
           <h3 class="label style-scope cr-buildbucket-view">No Tryjobs</h3>
           <div class="update style-scope cr-buildbucket-view">
-            Showing jobs from patch sets 1-2, 
-            Last updated at 
+            Showing jobs from patch set 1, 
+            Last updated at 8:17:19 AM
           </div>
         </div>
         <div class="container style-scope cr-buildbucket-view">
-          <span class="style-scope cr-buildbucket-view">
+          <span class="style-scope cr-buildbucket-view" hidden="true">
             <gr-button link="" class="style-scope cr-buildbucket-view x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Choose tryjobs<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
           </span>
           <span class="container style-scope cr-buildbucket-view" hidden="true">
@@ -2394,7 +2717,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     </main>
     <div class="helpText style-scope cr-tryjob-picker">
       Don’t see the bots you want? Edit this repo’s
-      <a class="style-scope cr-tryjob-picker" href="https:///chromiumos/infra/skylab_inventory/+/refs/meta/config/buildbucket.config">buildbucket.config</a>
+      <a class="style-scope cr-tryjob-picker" href="https://chromium.googlesource.com/chromiumos/third_party/kernel/+/refs/meta/config/buildbucket.config">buildbucket.config</a>
       to add them.
     </div>
     <footer class="style-scope cr-tryjob-picker">
@@ -2407,11 +2730,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     
   </gr-overlay>
     <cr-buildbucket-client id="client" class="style-scope cr-buildbucket-view"></cr-buildbucket-client>
-  </cr-buildbucket-view><tricium-view class="style-scope gr-endpoint-decorator x-scope tricium-view-0">
-    
-    <template is="dom-if" class="style-scope tricium-view"></template>
-    <tricium-client id="client" class="style-scope tricium-view"></tricium-client>
-  </tricium-view></gr-endpoint-decorator>
+  </cr-buildbucket-view></gr-endpoint-decorator>
       <paper-tabs id="commentTabs" class="style-scope gr-change-view x-scope paper-tabs-0" role="tablist" tabindex="0">
     
 
@@ -2476,29 +2795,29 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
       </span>
     </span>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="09e7ff3ebdf0f78ffe9c6e834594be1085280f67">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="747281565c4495f36994aaddcc27bce703be9717">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-UiK4qrQqewM/AAAAAAAAAAI/AAAAAAAAAAA/WgNGMM8BBXQ/s100-p/photo.jpg&quot;);">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <div class="contentContainer style-scope gr-message">
         <div class="author style-scope gr-message">
           <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message">Ningning Xia</span>
+            <span class="name style-scope gr-message">Sonny Rao</span>
             on behalf of
           </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
+          Sonny Rao</span>
         <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
+          (sonnyrao@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
@@ -2529,11 +2848,11 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-09e7ff3ebdf0f78ffe9c6e834594be1085280f67">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 31, 2018, 20:28:47 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-747281565c4495f36994aaddcc27bce703be9717">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 22, 2018, 02:18:14 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      May 31 20:28
+      May 22 02:18
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -2544,45 +2863,49 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="ee78acbb77f3cdb8bfffdf477e08f1083a0c4560">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="a44e6db54d6c066e600b49e89f871f3f88f8d165">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-UiK4qrQqewM/AAAAAAAAAAI/AAAAAAAAAAA/WgNGMM8BBXQ/s100-p/photo.jpg&quot;);">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <div class="contentContainer style-scope gr-message">
         <div class="author style-scope gr-message">
           <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message">Ningning Xia</span>
+            <span class="name style-scope gr-message">Sonny Rao</span>
             on behalf of
           </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
+          Sonny Rao</span>
         <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
+          (sonnyrao@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
   </gr-account-label>
+          
+            <span class="score positive max style-scope gr-message">
+              Verified +1
+            </span>
           <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
         </div>
         
           <div class="content style-scope gr-message">
-            <div class="message hideOnOpen style-scope gr-message">Uploaded patch set 2: Patch Set 1 was rebased.</div>
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1: Verified+1</div>
             <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
     
     <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Uploaded patch set 2: Patch Set 1 was rebased.</span>
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1: Verified+1</span>
   </gr-linked-text></p></div>
   </gr-formatted-text>
             <div class="replyContainer style-scope gr-message" hidden="true">
@@ -2597,11 +2920,11 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-ee78acbb77f3cdb8bfffdf477e08f1083a0c4560">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 31, 2018, 20:32:21 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-a44e6db54d6c066e600b49e89f871f3f88f8d165">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 22, 2018, 18:55:10 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      May 31 20:32
+      May 22 18:55
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -2612,143 +2935,49 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="6009f5ea52696181cba94199dbf5842c8cd5aacf">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-UiK4qrQqewM/AAAAAAAAAAI/AAAAAAAAAAA/WgNGMM8BBXQ/s100-p/photo.jpg&quot;);">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <div class="contentContainer style-scope gr-message">
         <div class="author style-scope gr-message">
           <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message"></span>
+            <span class="name style-scope gr-message">Sonny Rao</span>
             on behalf of
           </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
+          Sonny Rao</span>
         <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
+          (sonnyrao@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
   </gr-account-label>
-          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
-        </div>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        
-          <div class="content style-scope gr-message">
-            
-              <div class="updateCategory style-scope gr-message">
-                added to CC: 
-                
-                  <gr-account-chip class="style-scope gr-message x-scope gr-account-chip-0" show-avatar="">
-    
-    <div class="container  style-scope gr-account-chip">
-      <gr-account-link class="style-scope gr-account-chip x-scope gr-account-link-0">
-    
-    <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:xixuan%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" has-tooltip="" title="Xixuan Wu <xixuan@chromium.org>">
-    
-    <span class="style-scope gr-account-label">
-      
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-95nN_9De_Uk/AAAAAAAAAAI/AAAAAAAAAAA/J9FUi_N-5jM/s32-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Xixuan Wu</span>
-        <span class="email style-scope gr-account-label">
-          (xixuan@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-      </a>
-    </span>
-  </gr-account-link>
-      <gr-button id="remove" link="" hidden="true" tabindex="-1" aria-label="Remove" class="remove  style-scope gr-account-chip x-scope gr-button-9" role="button"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-        <iron-icon icon="gr-icons:close" class="style-scope gr-account-chip x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
-    
-  </iron-icon>
-      <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-chip"></gr-rest-api-interface>
-  </gr-account-chip>
-                <template is="dom-repeat" as="reviewer" class="style-scope gr-message"></template>
-              </div>
-            <template is="dom-repeat" as="update" class="style-scope gr-message"></template>
-          </div>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        
-          <span class="date style-scope gr-message">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 31, 2018, 20:34:08 UTC+00:00">
-    
-    <span class="style-scope gr-date-formatter">
-      May 31 20:34
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
-  </gr-date-formatter>
-          </span>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        <template is="dom-if" class="style-scope gr-message"></template>
-      </div>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
-  </gr-message>
-    
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="43b019bc3b2cddb4888c20ae430ab5ef3bd62bee">
-    
-    
-    <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-UiK4qrQqewM/AAAAAAAAAAI/AAAAAAAAAAA/WgNGMM8BBXQ/s100-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <div class="contentContainer style-scope gr-message">
-        <div class="author style-scope gr-message">
-          <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message">Ningning Xia</span>
-            on behalf of
-          </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
-    
-    <span class="style-scope gr-account-label">
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
-        <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
+          
+            <span class="score positive style-scope gr-message">
+              Commit-Queue +1
+            </span>
           <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
         </div>
         
           <div class="content style-scope gr-message">
-            <div class="message hideOnOpen style-scope gr-message">Assignee added: Xixuan Wu &lt;xixuan@chromium.org&gt;</div>
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1: Commit-Queue+1</div>
             <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
     
     <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Assignee added: Xixuan Wu &lt;xixuan@chromium.org&gt;</span>
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1: Commit-Queue+1</span>
   </gr-linked-text></p></div>
   </gr-formatted-text>
             <div class="replyContainer style-scope gr-message" hidden="true">
@@ -2763,11 +2992,11 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-43b019bc3b2cddb4888c20ae430ab5ef3bd62bee">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 31, 2018, 20:34:09 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-6009f5ea52696181cba94199dbf5842c8cd5aacf">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 22, 2018, 18:55:12 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      May 31 20:34
+      May 22 18:55
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -2778,225 +3007,29 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="a43bb6fa754473493a36ac9badafda26ef30ca41">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-UiK4qrQqewM/AAAAAAAAAAI/AAAAAAAAAAA/WgNGMM8BBXQ/s100-p/photo.jpg&quot;);">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <div class="contentContainer style-scope gr-message">
         <div class="author style-scope gr-message">
           <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message"></span>
+            <span class="name style-scope gr-message">Sonny Rao</span>
             on behalf of
           </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
+          Sonny Rao</span>
         <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
-        </div>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        
-          <div class="content style-scope gr-message">
-            
-              <div class="updateCategory style-scope gr-message">
-                added to REVIEWER: 
-                
-                  <gr-account-chip class="style-scope gr-message x-scope gr-account-chip-0" show-avatar="">
-    
-    <div class="container  style-scope gr-account-chip">
-      <gr-account-link class="style-scope gr-account-chip x-scope gr-account-link-0">
-    
-    <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:jrbarnette%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" has-tooltip="" title="Richard Barnette <jrbarnette@chromium.org>">
-    
-    <span class="style-scope gr-account-label">
-      
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-RAA4AQsR4xk/AAAAAAAAAAI/AAAAAAAAAAA/UNQkqedFZFg/s32-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Richard Barnette</span>
-        <span class="email style-scope gr-account-label">
-          (jrbarnette@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-      </a>
-    </span>
-  </gr-account-link>
-      <gr-button id="remove" link="" hidden="true" tabindex="-1" aria-label="Remove" class="remove  style-scope gr-account-chip x-scope gr-button-9" role="button"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-        <iron-icon icon="gr-icons:close" class="style-scope gr-account-chip x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
-    
-  </iron-icon>
-      <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-chip"></gr-rest-api-interface>
-  </gr-account-chip>
-                <template is="dom-repeat" as="reviewer" class="style-scope gr-message"></template>
-              </div>
-            <template is="dom-repeat" as="update" class="style-scope gr-message"></template>
-          </div>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        
-          <span class="date style-scope gr-message">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 31, 2018, 20:34:19 UTC+00:00">
-    
-    <span class="style-scope gr-date-formatter">
-      May 31 20:34
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
-  </gr-date-formatter>
-          </span>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        <template is="dom-if" class="style-scope gr-message"></template>
-      </div>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
-  </gr-message>
-    
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0">
-    
-    
-    <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-95nN_9De_Uk/AAAAAAAAAAI/AAAAAAAAAAA/J9FUi_N-5jM/s100-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <div class="contentContainer style-scope gr-message">
-        <div class="author style-scope gr-message">
-          <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message"></span>
-            on behalf of
-          </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Xixuan Wu <xixuan@chromium.org>" has-tooltip="">
-    
-    <span class="style-scope gr-account-label">
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Xixuan Wu</span>
-        <span class="email style-scope gr-account-label">
-          (xixuan@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
-        </div>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        
-          <div class="content style-scope gr-message">
-            
-              <div class="updateCategory style-scope gr-message">
-                moved from CC to REVIEWER: 
-                
-                  <gr-account-chip class="style-scope gr-message x-scope gr-account-chip-0" show-avatar="">
-    
-    <div class="container  style-scope gr-account-chip">
-      <gr-account-link class="style-scope gr-account-chip x-scope gr-account-link-0">
-    
-    <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:xixuan%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" has-tooltip="" title="Xixuan Wu <xixuan@chromium.org>">
-    
-    <span class="style-scope gr-account-label">
-      
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-95nN_9De_Uk/AAAAAAAAAAI/AAAAAAAAAAA/J9FUi_N-5jM/s32-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Xixuan Wu</span>
-        <span class="email style-scope gr-account-label">
-          (xixuan@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-      </a>
-    </span>
-  </gr-account-link>
-      <gr-button id="remove" link="" hidden="true" tabindex="-1" aria-label="Remove" class="remove  style-scope gr-account-chip x-scope gr-button-9" role="button"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-        <iron-icon icon="gr-icons:close" class="style-scope gr-account-chip x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
-    
-  </iron-icon>
-      <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-chip"></gr-rest-api-interface>
-  </gr-account-chip>
-                <template is="dom-repeat" as="reviewer" class="style-scope gr-message"></template>
-              </div>
-            <template is="dom-repeat" as="update" class="style-scope gr-message"></template>
-          </div>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        
-          <span class="date style-scope gr-message">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 18:39:23 UTC+00:00">
-    
-    <span class="style-scope gr-date-formatter">
-      Jun 01 18:39
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
-  </gr-date-formatter>
-          </span>
-        <template is="dom-if" class="style-scope gr-message"></template>
-        <template is="dom-if" class="style-scope gr-message"></template>
-      </div>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
-  </gr-message>
-    
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="7a7c85b976aaf56b1bfb0bea72d35222083f5be1">
-    
-    
-    <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-95nN_9De_Uk/AAAAAAAAAAI/AAAAAAAAAAA/J9FUi_N-5jM/s100-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <div class="contentContainer style-scope gr-message">
-        <div class="author style-scope gr-message">
-          <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message">Xixuan Wu</span>
-            on behalf of
-          </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Xixuan Wu <xixuan@chromium.org>" has-tooltip="">
-    
-    <span class="style-scope gr-account-label">
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Xixuan Wu</span>
-        <span class="email style-scope gr-account-label">
-          (xixuan@chromium.org)
+          (sonnyrao@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
@@ -3011,12 +3044,12 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         </div>
         
           <div class="content style-scope gr-message">
-            <div class="message hideOnOpen style-scope gr-message">Patch Set 2: Code-Review+2</div>
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1: Code-Review+2</div>
             <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
     
     <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Patch Set 2: Code-Review+2</span>
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1: Code-Review+2</span>
   </gr-linked-text></p></div>
   </gr-formatted-text>
             <div class="replyContainer style-scope gr-message" hidden="true">
@@ -3031,11 +3064,11 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-7a7c85b976aaf56b1bfb0bea72d35222083f5be1">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 18:39:24 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-a43bb6fa754473493a36ac9badafda26ef30ca41">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 22, 2018, 18:55:14 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01 18:39
+      May 22 18:55
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -3129,10 +3162,10 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         <template is="dom-if" class="style-scope gr-message"></template>
         
           <span class="date style-scope gr-message">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 18:54:25 UTC+00:00">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 22, 2018, 19:30:30 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01 18:54
+      May 22 19:30
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -3144,7 +3177,7 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="abe6c52e0ee02eac6cb311a65944d5621c715348">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="d2c7b84855ec4eedfa37728261091eb0626f0b47">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
@@ -3177,28 +3210,22 @@ Reviewed-by: Xixuan Wu &lt;xixuan@chromium.org&gt;
         </div>
         
           <div class="content style-scope gr-message">
-            <div class="message hideOnOpen style-scope gr-message">Patch Set 2:
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1:
 
-The Pre-Commit Queue has picked up your change.
-You can follow along at 
-(chromeos-infra-unittests-pre-cq) : https://cros-goldeneye.corp.google.com/chromeos/healthmonitoring/buildDetails?buildbucketId=8944896622484134912 .
-You can find the CL status and build information at https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1081179/2.
+The Pre-Commit Queue failed to apply your change in http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945805845697870480 . CL:1068486 depends on CL:1068485, which depends on CL:1068484, which depends on CL:1068483, which depends on CL:1068482, which depends on CL:1068481, which depends on CL:1068480, which depends on CL:1068479, which depends on CL:1068478, which depends on CL:1068477, which depends on CL:1068476, which is not marked Commit-Queue&gt;=+1.
 
 Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</div>
             <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
     
     <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Patch Set 2:</span>
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1:</span>
   </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">The Pre-Commit Queue has picked up your change.
-You can follow along at 
-(chromeos-infra-unittests-pre-cq) : https://cros-goldeneye.corp.google.com/chromeos/healthmonitoring/buildDetails?buildbucketId=8944896622484134912 .
-You can find the CL status and build information at https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1081179/2.</span>
+    <span id="output" class="style-scope gr-linked-text">The Pre-Commit Queue failed to apply your change in <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945805845697870480" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945805845697870480</a> . <a href="https://chromium-review.googlesource.com/#/q/1068486" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068486</a> depends on <a href="https://chromium-review.googlesource.com/#/q/1068485" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068485</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068484" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068484</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068483" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068483</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068482" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068482</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068481" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068481</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068480" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068480</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068479" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068479</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068478" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068478</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068477" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068477</a>, which depends on <a href="https://chromium-review.googlesource.com/#/q/1068476" target="_blank" rel="noopener" class="style-scope gr-linked-text">CL:1068476</a>, which is not marked Commit-Queue&gt;=+1.</span>
   </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</span>
+    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: <a href="http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</a></span>
   </gr-linked-text></p></div>
   </gr-formatted-text>
             <div class="replyContainer style-scope gr-message" hidden="true">
@@ -3213,11 +3240,11 @@ You can find the CL status and build information at https://chromeos-cl-viewer-u
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-abe6c52e0ee02eac6cb311a65944d5621c715348">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 18:54:26 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-d2c7b84855ec4eedfa37728261091eb0626f0b47">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 22, 2018, 19:30:31 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01 18:54
+      May 22 19:30
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -3228,29 +3255,29 @@ You can find the CL status and build information at https://chromeos-cl-viewer-u
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="5c9e1ecbd55ed15194a1e173d813e0f0cac4bce3">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="5b8bb81991b3b53b7e5435e65bd4192565795076">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-VEN8S91FcEo/AAAAAAAAAAI/AAAAAAAAAAA/kSsT04e65Kk/s100-p/photo.jpg&quot;);">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <div class="contentContainer style-scope gr-message">
         <div class="author style-scope gr-message">
-          <span class="style-scope gr-message" hidden="true">
+          <span class="style-scope gr-message">
             <span class="name style-scope gr-message">ChromeOS Commit Bot</span>
             on behalf of
           </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="ChromeOS Commit Bot <chromeos-commit-bot@chromium.org>" has-tooltip="">
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          ChromeOS Commit Bot</span>
+          Sonny Rao</span>
         <span class="email style-scope gr-account-label">
-          (chromeos-commit-bot@chromium.org)
+          (sonnyrao@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
@@ -3261,22 +3288,17 @@ You can find the CL status and build information at https://chromeos-cl-viewer-u
         </div>
         
           <div class="content style-scope gr-message">
-            <div class="message hideOnOpen style-scope gr-message">Patch Set 2:
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1: -Commit-Queue
 
-The Pre-Commit Queue has successfully verified your change.
-
-Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</div>
+Commit-Queue label set to 0 programmatically by chromite.</div>
             <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
     
     <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Patch Set 2:</span>
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1: -Commit-Queue</span>
   </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">The Pre-Commit Queue has successfully verified your change.</span>
-  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
-    
-    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</span>
+    <span id="output" class="style-scope gr-linked-text">Commit-Queue label set to 0 programmatically by chromite.</span>
   </gr-linked-text></p></div>
   </gr-formatted-text>
             <div class="replyContainer style-scope gr-message" hidden="true">
@@ -3291,11 +3313,11 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-5c9e1ecbd55ed15194a1e173d813e0f0cac4bce3">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 19:04:46 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-5b8bb81991b3b53b7e5435e65bd4192565795076">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 22, 2018, 19:30:32 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01 19:04
+      May 22 19:30
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -3306,39 +3328,35 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="10a2691d002c1c5b5dc348aec371ef648e39ab5f">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="f760f992f21463ccfd9afc4393297508205cf776">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-UiK4qrQqewM/AAAAAAAAAAI/AAAAAAAAAAA/WgNGMM8BBXQ/s100-p/photo.jpg&quot;);">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <div class="contentContainer style-scope gr-message">
         <div class="author style-scope gr-message">
           <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message">Ningning Xia</span>
+            <span class="name style-scope gr-message">Sonny Rao</span>
             on behalf of
           </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
+          Sonny Rao</span>
         <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
+          (sonnyrao@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
   </gr-account-label>
-          
-            <span class="score positive max style-scope gr-message">
-              Verified +1
-            </span>
           
             <span class="score positive style-scope gr-message">
               Commit-Queue +1
@@ -3347,12 +3365,12 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
         </div>
         
           <div class="content style-scope gr-message">
-            <div class="message hideOnOpen style-scope gr-message">Patch Set 2: Verified+1 Commit-Queue+1</div>
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1: Commit-Queue+1</div>
             <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
     
     <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Patch Set 2: Verified+1 Commit-Queue+1</span>
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1: Commit-Queue+1</span>
   </gr-linked-text></p></div>
   </gr-formatted-text>
             <div class="replyContainer style-scope gr-message" hidden="true">
@@ -3367,11 +3385,11 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-10a2691d002c1c5b5dc348aec371ef648e39ab5f">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 21:39:46 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-f760f992f21463ccfd9afc4393297508205cf776">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 14:54:22 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01 21:39
+      May 23 14:54
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -3382,29 +3400,29 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="07c90832ca9356f80cc69d546fc36bcbadaebad1">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="01b9390c68b7699dea519b4ad8d83460776addc1">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
-      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh5.googleusercontent.com/-UiK4qrQqewM/AAAAAAAAAAI/AAAAAAAAAAA/WgNGMM8BBXQ/s100-p/photo.jpg&quot;);">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-VEN8S91FcEo/AAAAAAAAAAI/AAAAAAAAAAA/kSsT04e65Kk/s100-p/photo.jpg&quot;);">
     
     <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
   </gr-avatar>
       <div class="contentContainer style-scope gr-message">
         <div class="author style-scope gr-message">
           <span class="style-scope gr-message" hidden="true">
-            <span class="name style-scope gr-message">Ningning Xia</span>
+            <span class="name style-scope gr-message">ChromeOS Commit Bot</span>
             on behalf of
           </span>
-          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Ningning Xia <nxia@chromium.org>" has-tooltip="">
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="ChromeOS Commit Bot <chromeos-commit-bot@chromium.org>" has-tooltip="">
     
     <span class="style-scope gr-account-label">
       <template is="dom-if" class="style-scope gr-account-label"></template>
       <span class="text  style-scope gr-account-label">
         <span class="name style-scope gr-account-label">
-          Ningning Xia</span>
+          ChromeOS Commit Bot</span>
         <span class="email style-scope gr-account-label">
-          (nxia@chromium.org)
+          (chromeos-commit-bot@chromium.org)
         </span>
         <template is="dom-if" class="style-scope gr-account-label"></template>
       </span>
@@ -3415,12 +3433,34 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
         </div>
         
           <div class="content style-scope gr-message">
-            <div class="message hideOnOpen style-scope gr-message">Assignee deleted: Xixuan Wu &lt;xixuan@chromium.org&gt;</div>
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1:
+
+The Pre-Commit Queue has picked up your change.
+You can follow along at 
+(glados-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721255736968192 
+(oak-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254012876080 
+(gale-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896 
+(cyan-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254590459280 .
+You can find the CL status and build information at https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1.
+
+Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</div>
             <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
     
     <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
     
-    <span id="output" class="style-scope gr-linked-text">Assignee deleted: Xixuan Wu &lt;xixuan@chromium.org&gt;</span>
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1:</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">The Pre-Commit Queue has picked up your change.
+You can follow along at 
+(glados-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721255736968192" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721255736968192</a> 
+(oak-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254012876080" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254012876080</a> 
+(gale-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896</a> 
+(cyan-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254590459280" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254590459280</a> .
+You can find the CL status and build information at <a href="https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1" target="_blank" rel="noopener" class="style-scope gr-linked-text">https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1</a>.</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: <a href="http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</a></span>
   </gr-linked-text></p></div>
   </gr-formatted-text>
             <div class="replyContainer style-scope gr-message" hidden="true">
@@ -3435,11 +3475,11 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-07c90832ca9356f80cc69d546fc36bcbadaebad1">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 21:40:03 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-01b9390c68b7699dea519b4ad8d83460776addc1">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 16:32:53 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01 21:40
+      May 23 16:32
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -3450,7 +3490,495 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
     <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
   </gr-message>
     
-      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="72c88fdaaafd55918e1c8fb47e9e040117776ca0">
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="be075fc0fdcfeedb9f45a2959edf49f475c529a0">
+    
+    
+    <div class="collapsed showAvatar style-scope gr-message">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-VEN8S91FcEo/AAAAAAAAAAI/AAAAAAAAAAA/kSsT04e65Kk/s100-p/photo.jpg&quot;);">
+    
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
+  </gr-avatar>
+      <div class="contentContainer style-scope gr-message">
+        <div class="author style-scope gr-message">
+          <span class="style-scope gr-message" hidden="true">
+            <span class="name style-scope gr-message">ChromeOS Commit Bot</span>
+            on behalf of
+          </span>
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="ChromeOS Commit Bot <chromeos-commit-bot@chromium.org>" has-tooltip="">
+    
+    <span class="style-scope gr-account-label">
+      <template is="dom-if" class="style-scope gr-account-label"></template>
+      <span class="text  style-scope gr-account-label">
+        <span class="name style-scope gr-account-label">
+          ChromeOS Commit Bot</span>
+        <span class="email style-scope gr-account-label">
+          (chromeos-commit-bot@chromium.org)
+        </span>
+        <template is="dom-if" class="style-scope gr-account-label"></template>
+      </span>
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
+  </gr-account-label>
+          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
+        </div>
+        
+          <div class="content style-scope gr-message">
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1:
+
+The following build(s) failed:
+
+gale-pre-cq: The UnitTest stage failed: Packages failed in /mnt/host/source/chromite/bin/cros_run_unit_tests: chromeos-base/ap-infra chromeos-base/ap-wireless in http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896
+
+Your change may have caused this failure. There are also other changes that may be at fault: 41 other changes. See the blamelist for more details.
+
+We notify the first failure only. Please find the full status at https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1.
+
+Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</div>
+            <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
+    
+    <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1:</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">The following build(s) failed:</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">gale-pre-cq: The UnitTest stage failed: Packages failed in /mnt/host/source/chromite/bin/cros_run_unit_tests: chromeos-base/ap-infra chromeos-base/ap-wireless in <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896</a></span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Your change may have caused this failure. There are also other changes that may be at fault: 41 other changes. See the blamelist for more details.</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">We notify the first failure only. Please find the full status at <a href="https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1" target="_blank" rel="noopener" class="style-scope gr-linked-text">https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1</a>.</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: <a href="http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</a></span>
+  </gr-linked-text></p></div>
+  </gr-formatted-text>
+            <div class="replyContainer style-scope gr-message" hidden="true">
+              <gr-button link="" small="" class="style-scope gr-message x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Reply<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
+            </div>
+            <gr-comment-list class="style-scope gr-message x-scope gr-comment-list-0">
+    
+    <template is="dom-repeat" as="file" class="style-scope gr-comment-list"></template>
+  </gr-comment-list>
+          </div>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        
+          <a class="date style-scope gr-message" href="#message-be075fc0fdcfeedb9f45a2959edf49f475c529a0">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 17:09:40 UTC+00:00">
+    
+    <span class="style-scope gr-date-formatter">
+      May 23 17:09
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
+  </gr-date-formatter>
+          </a>
+        <template is="dom-if" class="style-scope gr-message"></template>
+      </div>
+    </div>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
+  </gr-message>
+    
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="1f0723dff5e17b37e5996c8c93de615a0e2891ee">
+    
+    
+    <div class="collapsed showAvatar style-scope gr-message">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
+    
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
+  </gr-avatar>
+      <div class="contentContainer style-scope gr-message">
+        <div class="author style-scope gr-message">
+          <span class="style-scope gr-message">
+            <span class="name style-scope gr-message">ChromeOS Commit Bot</span>
+            on behalf of
+          </span>
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
+    
+    <span class="style-scope gr-account-label">
+      <template is="dom-if" class="style-scope gr-account-label"></template>
+      <span class="text  style-scope gr-account-label">
+        <span class="name style-scope gr-account-label">
+          Sonny Rao</span>
+        <span class="email style-scope gr-account-label">
+          (sonnyrao@chromium.org)
+        </span>
+        <template is="dom-if" class="style-scope gr-account-label"></template>
+      </span>
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
+  </gr-account-label>
+          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
+        </div>
+        
+          <div class="content style-scope gr-message">
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1: -Commit-Queue
+
+Commit-Queue label set to 0 programmatically by chromite.</div>
+            <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
+    
+    <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1: -Commit-Queue</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Commit-Queue label set to 0 programmatically by chromite.</span>
+  </gr-linked-text></p></div>
+  </gr-formatted-text>
+            <div class="replyContainer style-scope gr-message" hidden="true">
+              <gr-button link="" small="" class="style-scope gr-message x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Reply<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
+            </div>
+            <gr-comment-list class="style-scope gr-message x-scope gr-comment-list-0">
+    
+    <template is="dom-repeat" as="file" class="style-scope gr-comment-list"></template>
+  </gr-comment-list>
+          </div>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        
+          <a class="date style-scope gr-message" href="#message-1f0723dff5e17b37e5996c8c93de615a0e2891ee">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 17:09:41 UTC+00:00">
+    
+    <span class="style-scope gr-date-formatter">
+      May 23 17:09
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
+  </gr-date-formatter>
+          </a>
+        <template is="dom-if" class="style-scope gr-message"></template>
+      </div>
+    </div>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
+  </gr-message>
+    
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="51a5c24114380841940d8d0da338653bb8e2295f">
+    
+    
+    <div class="collapsed showAvatar style-scope gr-message">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-KUW4DjLj7oM/AAAAAAAAAAI/AAAAAAAAAAA/MSP0SD9SNpI/s100-p/photo.jpg&quot;);">
+    
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
+  </gr-avatar>
+      <div class="contentContainer style-scope gr-message">
+        <div class="author style-scope gr-message">
+          <span class="style-scope gr-message" hidden="true">
+            <span class="name style-scope gr-message">Sonny Rao</span>
+            on behalf of
+          </span>
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="Sonny Rao <sonnyrao@chromium.org>" has-tooltip="">
+    
+    <span class="style-scope gr-account-label">
+      <template is="dom-if" class="style-scope gr-account-label"></template>
+      <span class="text  style-scope gr-account-label">
+        <span class="name style-scope gr-account-label">
+          Sonny Rao</span>
+        <span class="email style-scope gr-account-label">
+          (sonnyrao@chromium.org)
+        </span>
+        <template is="dom-if" class="style-scope gr-account-label"></template>
+      </span>
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
+  </gr-account-label>
+          
+            <span class="score positive style-scope gr-message">
+              Commit-Queue +1
+            </span>
+          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
+        </div>
+        
+          <div class="content style-scope gr-message">
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1: Commit-Queue+1</div>
+            <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
+    
+    <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1: Commit-Queue+1</span>
+  </gr-linked-text></p></div>
+  </gr-formatted-text>
+            <div class="replyContainer style-scope gr-message" hidden="true">
+              <gr-button link="" small="" class="style-scope gr-message x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Reply<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
+            </div>
+            <gr-comment-list class="style-scope gr-message x-scope gr-comment-list-0">
+    
+    <template is="dom-repeat" as="file" class="style-scope gr-comment-list"></template>
+  </gr-comment-list>
+          </div>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        
+          <a class="date style-scope gr-message" href="#message-51a5c24114380841940d8d0da338653bb8e2295f">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 17:22:49 UTC+00:00">
+    
+    <span class="style-scope gr-date-formatter">
+      May 23 17:22
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
+  </gr-date-formatter>
+          </a>
+        <template is="dom-if" class="style-scope gr-message"></template>
+      </div>
+    </div>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
+  </gr-message>
+    
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="892153b61bd11b9ba3849991c2647fea90b734cb">
+    
+    
+    <div class="collapsed showAvatar style-scope gr-message">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-VEN8S91FcEo/AAAAAAAAAAI/AAAAAAAAAAA/kSsT04e65Kk/s100-p/photo.jpg&quot;);">
+    
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
+  </gr-avatar>
+      <div class="contentContainer style-scope gr-message">
+        <div class="author style-scope gr-message">
+          <span class="style-scope gr-message" hidden="true">
+            <span class="name style-scope gr-message">ChromeOS Commit Bot</span>
+            on behalf of
+          </span>
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="ChromeOS Commit Bot <chromeos-commit-bot@chromium.org>" has-tooltip="">
+    
+    <span class="style-scope gr-account-label">
+      <template is="dom-if" class="style-scope gr-account-label"></template>
+      <span class="text  style-scope gr-account-label">
+        <span class="name style-scope gr-account-label">
+          ChromeOS Commit Bot</span>
+        <span class="email style-scope gr-account-label">
+          (chromeos-commit-bot@chromium.org)
+        </span>
+        <template is="dom-if" class="style-scope gr-account-label"></template>
+      </span>
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
+  </gr-account-label>
+          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
+        </div>
+        
+          <div class="content style-scope gr-message">
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1:
+
+The Pre-Commit Queue has picked up your change.
+You can follow along at 
+(glados-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721255736968192 
+(oak-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254012876080 
+(gale-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896 
+(cyan-pre-cq) : http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254590459280 .
+You can find the CL status and build information at https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1.
+
+Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</div>
+            <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
+    
+    <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1:</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">The Pre-Commit Queue has picked up your change.
+You can follow along at 
+(glados-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721255736968192" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721255736968192</a> 
+(oak-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254012876080" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254012876080</a> 
+(gale-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721253464458896</a> 
+(cyan-pre-cq) : <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254590459280" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945721254590459280</a> .
+You can find the CL status and build information at <a href="https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1" target="_blank" rel="noopener" class="style-scope gr-linked-text">https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1</a>.</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: <a href="http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</a></span>
+  </gr-linked-text></p></div>
+  </gr-formatted-text>
+            <div class="replyContainer style-scope gr-message" hidden="true">
+              <gr-button link="" small="" class="style-scope gr-message x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Reply<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
+            </div>
+            <gr-comment-list class="style-scope gr-message x-scope gr-comment-list-0">
+    
+    <template is="dom-repeat" as="file" class="style-scope gr-comment-list"></template>
+  </gr-comment-list>
+          </div>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        
+          <a class="date style-scope gr-message" href="#message-892153b61bd11b9ba3849991c2647fea90b734cb">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 17:23:56 UTC+00:00">
+    
+    <span class="style-scope gr-date-formatter">
+      May 23 17:23
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
+  </gr-date-formatter>
+          </a>
+        <template is="dom-if" class="style-scope gr-message"></template>
+      </div>
+    </div>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
+  </gr-message>
+    
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="45a7ee7507a9582d3f28c676fe3b6fc54ea0c17a">
+    
+    
+    <div class="collapsed showAvatar style-scope gr-message">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-VEN8S91FcEo/AAAAAAAAAAI/AAAAAAAAAAA/kSsT04e65Kk/s100-p/photo.jpg&quot;);">
+    
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
+  </gr-avatar>
+      <div class="contentContainer style-scope gr-message">
+        <div class="author style-scope gr-message">
+          <span class="style-scope gr-message" hidden="true">
+            <span class="name style-scope gr-message">ChromeOS Commit Bot</span>
+            on behalf of
+          </span>
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="ChromeOS Commit Bot <chromeos-commit-bot@chromium.org>" has-tooltip="">
+    
+    <span class="style-scope gr-account-label">
+      <template is="dom-if" class="style-scope gr-account-label"></template>
+      <span class="text  style-scope gr-account-label">
+        <span class="name style-scope gr-account-label">
+          ChromeOS Commit Bot</span>
+        <span class="email style-scope gr-account-label">
+          (chromeos-commit-bot@chromium.org)
+        </span>
+        <template is="dom-if" class="style-scope gr-account-label"></template>
+      </span>
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
+  </gr-account-label>
+          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
+        </div>
+        
+          <div class="content style-scope gr-message">
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1:
+
+The Pre-Commit Queue has successfully verified your change.
+
+Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</div>
+            <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
+    
+    <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1:</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">The Pre-Commit Queue has successfully verified your change.</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: <a href="http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</a></span>
+  </gr-linked-text></p></div>
+  </gr-formatted-text>
+            <div class="replyContainer style-scope gr-message" hidden="true">
+              <gr-button link="" small="" class="style-scope gr-message x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Reply<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
+            </div>
+            <gr-comment-list class="style-scope gr-message x-scope gr-comment-list-0">
+    
+    <template is="dom-repeat" as="file" class="style-scope gr-comment-list"></template>
+  </gr-comment-list>
+          </div>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        
+          <a class="date style-scope gr-message" href="#message-45a7ee7507a9582d3f28c676fe3b6fc54ea0c17a">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 18:20:32 UTC+00:00">
+    
+    <span class="style-scope gr-date-formatter">
+      May 23 18:20
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
+  </gr-date-formatter>
+          </a>
+        <template is="dom-if" class="style-scope gr-message"></template>
+      </div>
+    </div>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
+  </gr-message>
+    
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="7afa28537581f52f8c121fa853d23c065ab16e22">
+    
+    
+    <div class="collapsed showAvatar style-scope gr-message">
+      <gr-avatar image-size="100" class="style-scope gr-message x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-VEN8S91FcEo/AAAAAAAAAAI/AAAAAAAAAAA/kSsT04e65Kk/s100-p/photo.jpg&quot;);">
+    
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
+  </gr-avatar>
+      <div class="contentContainer style-scope gr-message">
+        <div class="author style-scope gr-message">
+          <span class="style-scope gr-message" hidden="true">
+            <span class="name style-scope gr-message">ChromeOS Commit Bot</span>
+            on behalf of
+          </span>
+          <gr-account-label hide-avatar="" class="style-scope gr-message x-scope gr-account-label-1" title="ChromeOS Commit Bot <chromeos-commit-bot@chromium.org>" has-tooltip="">
+    
+    <span class="style-scope gr-account-label">
+      <template is="dom-if" class="style-scope gr-account-label"></template>
+      <span class="text  style-scope gr-account-label">
+        <span class="name style-scope gr-account-label">
+          ChromeOS Commit Bot</span>
+        <span class="email style-scope gr-account-label">
+          (chromeos-commit-bot@chromium.org)
+        </span>
+        <template is="dom-if" class="style-scope gr-account-label"></template>
+      </span>
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
+  </gr-account-label>
+          <template is="dom-repeat" as="score" class="style-scope gr-message"></template>
+        </div>
+        
+          <div class="content style-scope gr-message">
+            <div class="message hideOnOpen style-scope gr-message">Patch Set 1:
+
+The Commit Queue has picked up your change.
+You can follow along at http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945707478655496128.
+You can find the CL status and build information at https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1.
+
+Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</div>
+            <gr-formatted-text no-trailing-margin="" class="message hideOnCollapsed style-scope gr-message noTrailingMargin x-scope gr-formatted-text-1">
+    
+    <div id="container" class="style-scope gr-formatted-text"><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Patch Set 1:</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">The Commit Queue has picked up your change.
+You can follow along at <a href="http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945707478655496128" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://cros-goldeneye/chromeos/healthmonitoring/buildDetails?buildbucketId=8945707478655496128</a>.
+You can find the CL status and build information at <a href="https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1" target="_blank" rel="noopener" class="style-scope gr-linked-text">https://chromeos-cl-viewer-ui.googleplex.com/cl_status/chromium-review.googlesource.com/1068486/1</a>.</span>
+  </gr-linked-text></p><p class="style-scope gr-formatted-text"><gr-linked-text pre="" class="style-scope gr-formatted-text x-scope gr-linked-text-0">
+    
+    <span id="output" class="style-scope gr-linked-text">Commit queue documentation: <a href="http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview" target="_blank" rel="noopener" class="style-scope gr-linked-text">http://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium-os/commit-queue-overview</a></span>
+  </gr-linked-text></p></div>
+  </gr-formatted-text>
+            <div class="replyContainer style-scope gr-message" hidden="true">
+              <gr-button link="" small="" class="style-scope gr-message x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Reply<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
+            </div>
+            <gr-comment-list class="style-scope gr-message x-scope gr-comment-list-0">
+    
+    <template is="dom-repeat" as="file" class="style-scope gr-comment-list"></template>
+  </gr-comment-list>
+          </div>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        <template is="dom-if" class="style-scope gr-message"></template>
+        
+          <a class="date style-scope gr-message" href="#message-7afa28537581f52f8c121fa853d23c065ab16e22">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 20:13:35 UTC+00:00">
+    
+    <span class="style-scope gr-date-formatter">
+      May 23 20:13
+    </span>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
+  </gr-date-formatter>
+          </a>
+        <template is="dom-if" class="style-scope gr-message"></template>
+      </div>
+    </div>
+    <gr-rest-api-interface id="restAPI" class="style-scope gr-message"></gr-rest-api-interface>
+  </gr-message>
+    
+      <gr-message class="style-scope gr-messages-list x-scope gr-message-0" data-message-id="4770a799ac5db3af74fad6e7ecee98c6e7e40391">
     
     
     <div class="collapsed showAvatar style-scope gr-message">
@@ -3503,11 +4031,11 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
         <template is="dom-if" class="style-scope gr-message"></template>
         <template is="dom-if" class="style-scope gr-message"></template>
         
-          <a class="date style-scope gr-message" href="#message-72c88fdaaafd55918e1c8fb47e9e040117776ca0">
-            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="Jun 01, 2018, 21:45:43 UTC+00:00">
+          <a class="date style-scope gr-message" href="#message-4770a799ac5db3af74fad6e7ecee98c6e7e40391">
+            <gr-date-formatter has-tooltip="" show-date-and-time="" class="style-scope gr-message x-scope gr-date-formatter-0" title="May 23, 2018, 23:50:01 UTC+00:00">
     
     <span class="style-scope gr-date-formatter">
-      Jun 01 21:45
+      May 23 23:50
     </span>
     <gr-rest-api-interface id="restAPI" class="style-scope gr-date-formatter"></gr-rest-api-interface>
   </gr-date-formatter>
@@ -3530,7 +4058,7 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
     
     <header class="style-scope gr-download-dialog">
       <span class="title style-scope gr-download-dialog">
-        Patch set 3 of 3
+        Patch set 2 of 2
       </span>
       <span class="closeButtonContainer style-scope gr-download-dialog">
         <gr-button id="closeButton" link="" class="style-scope gr-download-dialog x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Close<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
@@ -3606,11 +4134,11 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
       <div class="patchFiles style-scope gr-download-dialog">
         <label class="style-scope gr-download-dialog">Patch file</label>
         <div class="style-scope gr-download-dialog">
-          <a id="download" download="" class="style-scope gr-download-dialog" href="/changes/1081179/revisions/3/patch?download">
-            f90676d.diff.base64
+          <a id="download" download="" class="style-scope gr-download-dialog" href="/changes/1068486/revisions/2/patch?download">
+            907691b.diff.base64
           </a>
-          <a download="" class="style-scope gr-download-dialog" href="/changes/1081179/revisions/3/patch?zip">
-            f90676d.diff.zip
+          <a download="" class="style-scope gr-download-dialog" href="/changes/1068486/revisions/2/patch?zip">
+            907691b.diff.zip
           </a>
         </div>
       </div>
@@ -3655,84 +4183,6 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
     
     
     <div class="list style-scope gr-account-list">
-      
-        <gr-account-chip tabindex="-1" class="style-scope gr-account-list x-scope gr-account-chip-0" data-account-id="1000108" show-avatar="">
-    
-    <div class="container  style-scope gr-account-chip">
-      <gr-account-link class="style-scope gr-account-chip x-scope gr-account-link-0">
-    
-    <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:jrbarnette%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" has-tooltip="" title="Richard Barnette <jrbarnette@chromium.org>">
-    
-    <span class="style-scope gr-account-label">
-      
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh6.googleusercontent.com/-RAA4AQsR4xk/AAAAAAAAAAI/AAAAAAAAAAA/UNQkqedFZFg/s32-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Richard Barnette</span>
-        <span class="email style-scope gr-account-label">
-          (jrbarnette@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-      </a>
-    </span>
-  </gr-account-link>
-      <gr-button id="remove" link="" hidden="true" tabindex="-1" aria-label="Remove" class="remove  style-scope gr-account-chip x-scope gr-button-9" role="button"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-        <iron-icon icon="gr-icons:close" class="style-scope gr-account-chip x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
-    
-  </iron-icon>
-      <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-chip"></gr-rest-api-interface>
-  </gr-account-chip>
-      
-        <gr-account-chip tabindex="-1" class="style-scope gr-account-list x-scope gr-account-chip-0" data-account-id="1142534" show-avatar="">
-    
-    <div class="container  style-scope gr-account-chip">
-      <gr-account-link class="style-scope gr-account-chip x-scope gr-account-link-0">
-    
-    <span class="style-scope gr-account-link">
-      <a tabindex="-1" class="style-scope gr-account-link" href="/q/owner:xixuan%2540chromium.org">
-        <gr-account-label class="style-scope gr-account-link x-scope gr-account-label-0" has-tooltip="" title="Xixuan Wu <xixuan@chromium.org>">
-    
-    <span class="style-scope gr-account-label">
-      
-        <gr-avatar class="style-scope gr-account-label x-scope gr-avatar-0" style="background-image: url(&quot;https://lh4.googleusercontent.com/-95nN_9De_Uk/AAAAAAAAAAI/AAAAAAAAAAA/J9FUi_N-5jM/s32-p/photo.jpg&quot;);">
-    
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-avatar"></gr-rest-api-interface>
-  </gr-avatar>
-      <template is="dom-if" class="style-scope gr-account-label"></template>
-      <span class="text  style-scope gr-account-label">
-        <span class="name style-scope gr-account-label">
-          Xixuan Wu</span>
-        <span class="email style-scope gr-account-label">
-          (xixuan@chromium.org)
-        </span>
-        <template is="dom-if" class="style-scope gr-account-label"></template>
-      </span>
-    </span>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-label"></gr-rest-api-interface>
-  </gr-account-label>
-      </a>
-    </span>
-  </gr-account-link>
-      <gr-button id="remove" link="" hidden="true" tabindex="-1" aria-label="Remove" class="remove  style-scope gr-account-chip x-scope gr-button-9" role="button"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">
-        <iron-icon icon="gr-icons:close" class="style-scope gr-account-chip x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
-    
-  </iron-icon>
-      <i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
-    </div>
-    <gr-rest-api-interface id="restAPI" class="style-scope gr-account-chip"></gr-rest-api-interface>
-  </gr-account-chip>
       <template id="chips" is="dom-repeat" as="account" class="style-scope gr-account-list"></template>
     </div>
     <gr-account-entry borderless="" id="entry" class="style-scope gr-account-list x-scope gr-account-entry-0">
@@ -3952,7 +4402,7 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
     </div>
   </iron-autogrow-textarea>
   </gr-textarea>
-        <chromium-behavior-autogenerated-reply-text class="style-scope gr-endpoint-decorator"></chromium-behavior-autogenerated-reply-text></gr-endpoint-decorator>
+        <chromium-behavior-autogenerated-reply-text class="style-scope gr-endpoint-decorator"></chromium-behavior-autogenerated-reply-text><chromium-behavior-autogenerated-reply-text class="style-scope gr-endpoint-decorator"></chromium-behavior-autogenerated-reply-text></gr-endpoint-decorator>
       </section>
       <section class="previewContainer style-scope gr-reply-dialog">
         <label class="style-scope gr-reply-dialog">
@@ -4077,10 +4527,10 @@ Commit queue documentation: http://www.chromium.org/developers/tree-sheriffs/she
         <div class="left style-scope gr-reply-dialog">
           <template is="dom-if" class="style-scope gr-reply-dialog"></template>
           <span id="checkingStatusLabel" class="style-scope gr-reply-dialog">
-            Checking whether patch 3 is latest...
+            Checking whether patch 2 is latest...
           </span>
           <span id="notLatestLabel" class="style-scope gr-reply-dialog">
-            Patch 3 is not latest.
+            Patch 2 is not latest.
             <gr-button link="" class="style-scope gr-reply-dialog x-scope gr-button-1" role="button" tabindex="0"><paper-button tabindex="-1" class="style-scope gr-button x-scope paper-button-0" role="button" animated="" aria-disabled="false" elevation="0">Reload<i class="downArrow style-scope gr-button"></i></paper-button></gr-button>
           </span>
         </div>

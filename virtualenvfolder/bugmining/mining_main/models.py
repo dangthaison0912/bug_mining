@@ -10,6 +10,10 @@ class Bug(models.Model):
     def __str__(self):
         return self.bug_id
 
+class Release(models.Model):
+    release_number = models.CharField(max_length=200)
+    def __str__(self):
+        return self.release_number
 
 class File(models.Model):
     file_path =models.CharField(max_length=200)
@@ -17,6 +21,7 @@ class File(models.Model):
     involved = models.IntegerField(default=0)
     total_changeset = models.IntegerField(default=0)
     bugs = models.ManyToManyField(Bug)
+    release = models.ForeignKey(Release, on_delete=models.CASCADE)
     added = models.IntegerField(default=0)
     deleted = models.IntegerField(default=0)
     #to String
@@ -26,3 +31,5 @@ class File(models.Model):
 class Author(models.Model):
     author_name = models.CharField(max_length=200)
     files = models.ManyToManyField(File)
+    def __str__(self):
+        return self.author_name

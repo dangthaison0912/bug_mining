@@ -2,15 +2,17 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.template import loader
 from django.http import Http404
-from .models import Bug, File, Author
+from .models import Bug, File, Author, Release
 from .bug_id_scraping import get_bugids, get_gerrit_links
 from .js_scraping import get_inner_html, get_committed_files, get_authors, get_date
+from .code_metrics_scraping import get_code_metrics, get_release, check_vulnerability
 PATH = 0
 ADDED = 1
 DELETED = 2
-
+CHANGESET = 3
+BUGS = 4
 def index(request):
-    file_list = File.objects.order_by('-involved')[:5]
+    file_list = File.objects.order_by('file_path')
     template = loader.get_template('mining_main/index.html')
     context = {
         'file_list' : file_list
@@ -33,7 +35,7 @@ def update_bug_lists(request):
     ids = get_bugids()
     ids.sort()
     ids.reverse()
-    top5 = ids[:5]
+    top5 = ids[:100]
     i = 0
     for id in top5:
         try:
@@ -43,13 +45,13 @@ def update_bug_lists(request):
             b.save()
             get_info_from_bug(b)
             i += 1
-            print("finished ", i, " files")
+            print("finished ", i, " bugs")
     # bug_list = Bug.objects.order_by('bug_id')
     # template = loader.get_template('mining_main/index.html')
     # context = {
     #     'bug_list': bug_list
     # }
-    file_list = File.objects.order_by('-involved')[:5]
+    file_list = File.objects.order_by('-involved')[:10]
     template = loader.get_template('mining_main/index.html')
     context = {
         'file_list' : file_list
@@ -96,11 +98,95 @@ def update_file_database(file_info, bug, changeset):
     f.added += int(added)
     f.deleted += int(deleted)
     f.last_updated = bug.updated_date
-    f.involved += 1
     f.total_changeset += changeset
-    f.bugs.add(bug)
+    try:
+        b = f.bugs.get(bug)
+    except Bug.DoesNotExist:
+        f.bugs.add(bug)
+        f.involved += 1
     f.save()
     return f
+
+def get_metrics_from_git(request):
+    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
+    release_number = get_release(url)
+    print("Release number: ", release_number)
+    try:
+        release = Release.objects.get(release_number=release_number)
+    except Release.DoesNotExist:
+        release = Release(release_number=release_number)
+    release.save()
+    path_metrics_changeset_bugs = get_code_metrics(url)
+    for file_info in path_metrics_changeset_bugs:
+        update_files_from_git(file_info, release)
+    return index(request)
+
+
+def update_files_from_git(file_info, release):
+    path = file_info[PATH]
+    added = file_info[ADDED]
+    deleted = file_info[DELETED]
+    changeset = file_info[CHANGESET]
+    bugids = file_info[BUGS]
+    bugs = []
+    for bugid in bugids:
+        try:
+            bug = Bug.objects.get(bug_id=str(bugid))
+        except Bug.DoesNotExist:
+            bug = Bug(bug_id=str(bugid))
+            bug.save()
+            print("added ", bugid)
+        bugs.append(bug)
+
+    try:
+        f = File.objects.get(file_path=path, release=release)
+    except File.DoesNotExist:
+        f = File(file_path=path, release=release)
+        f.save()
+        print("added ", f.file_path)
+    f.added += int(added)
+    f.deleted += int(deleted)
+    f.total_changeset += int(changeset)-1
+    for bug in bugs:
+        try:
+            b = f.bugs.get(bug_id=bug.bug_id)
+        except Bug.DoesNotExist:
+            f.bugs.add(bug)
+            f.involved += 1
+    f.save()
+    return f
+
+def check_defects_in_next_release(request):
+    # files_list = File.objects.filter(release__release_number='66.0.3359.170..66.0.3359.181
+    files_list = File.objects.all()
+    file_path_list = []
+    for file in files_list:
+        file_path_list.append(file.file_path)
+    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
+    next_release_defects = check_vulnerability(url)
+    files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
+
+    print_data(files_defects_map)
+
+    template = loader.get_template('mining_main/result.html')
+    context = {
+        'files_defects_map' : files_defects_map
+    }
+    return render(request, 'mining_main/result.html', context)
+
+def map_files_and_bugs(file_path_list, next_release_defects):
+    bugs_in_files = []
+    counter = 0
+
+    for file in file_path_list:
+        print("checking ", counter, "/", len(file_path_list))
+        is_defected = False
+        if file in next_release_defects:
+            is_defected = True
+        bugs_in_files.append(is_defected)
+        counter += 1
+    files_defects_map = zip(file_path_list, bugs_in_files)
+    return files_defects_map
 
 def update_author_database(author_name, file):
     try:
@@ -113,3 +199,22 @@ def update_author_database(author_name, file):
     author.files.add(file)
     author.save()
     return author
+
+def print_data(files_defects_map):
+    defect_list = open("defect.txt", "w")
+    non_defect_list = open("non-defect.txt", "w")
+    is_defect = 0
+    not_defect = 0
+    for file_defect_status in files_defects_map:
+        print(file_defect_status[0], ": ", file_defect_status[1])
+        if(file_defect_status[1]):
+            defect_list.write(file_defect_status[0] + "\n")
+            is_defect += 1
+        else:
+            non_defect_list.write(file_defect_status[0] + "\n")
+            not_defect +=1
+    print("Total defected files: ", is_defect)
+    print("Total safe files: ", not_defect)
+
+    defect_list.close()
+    non_defect_list.close()

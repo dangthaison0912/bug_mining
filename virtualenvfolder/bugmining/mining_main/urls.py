@@ -12,6 +12,8 @@ urlpatterns = [
     path('<int:bug_id>/', views.bug_detail, name='bug_detail'),
     path('file/<int:file_id>/', views.file_detail, name='file_detail'),
     path('author/<int:author_id>/', views.author_detail, name='author_detail'),
-    path('update', views.update_bug_lists, name='update'),
-    path('delete', views.delete_all_bugs, name='delete')
+    path('update-from-blog', views.update_bug_lists, name='updateblog'),
+    path('update-from-git', views.get_metrics_from_git, name='updategit'),
+    path('delete', views.delete_all_bugs, name='delete'),
+    path('check-vuls', views.check_defects_in_next_release, name = 'checkvuls')
 ]

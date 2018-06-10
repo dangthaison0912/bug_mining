@@ -1,0 +1,9 @@
+{% if files_defects_map %}
+    <ul>
+    {% for file in file_list %}
+        {{ file}}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No files are available.</p>
+{% endif %}

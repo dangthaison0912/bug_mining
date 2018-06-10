@@ -11,13 +11,16 @@
 {% if file_list %}
     <ul>
     {% for file in file_list %}
-        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }}</a></li> {{file.involved}}
+        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No files are available.</p>
 {% endif %}
 <ul>
-  <li><a href="{% url 'mining_main:update' %}">Update</a></li>
+  <li><a href="{% url 'mining_main:updateblog' %}">Update from Chromium Bug Blog</a></li>
+  <li><a href="{% url 'mining_main:updategit' %}">Update from Git</a></li>
   <li><a href="{% url 'mining_main:delete' %}">Delete</a></li>
+  <li><a href="{% url 'mining_main:checkvuls' %}">Check Vulnerabilities</a></li>
+
 </ul>
