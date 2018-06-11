@@ -184,9 +184,9 @@ def map_files_and_bugs(file_path_list, next_release_defects):
 
     for file in file_path_list:
         print("checking ", counter, "/", len(file_path_list))
-        is_defected = False
+        is_defected = 0
         if file in next_release_defects:
-            is_defected = True
+            is_defected = 1
         bugs_in_files.append(is_defected)
         counter += 1
     files_defects_map = zip(file_path_list, bugs_in_files)
@@ -244,7 +244,7 @@ def print_attributes(files_defects_map):
         average_added = round(total_added/total_involved, 2)
         average_deleted = round(total_deleted/total_involved, 2)
         average_changset = round(total_changeset/total_involved, 2)
-        file_attributes = [file[PATH], str(average_added), str(average_deleted), str(average_changset), str(file[1])]
+        file_attributes = [file[PATH], str(total_added), str(total_deleted), str(average_changset), str(file[1])]
         file_attributes_list.append(file_attributes)
         data_set.write(" ".join(file_attributes) + "\n")
     data_set.close()
