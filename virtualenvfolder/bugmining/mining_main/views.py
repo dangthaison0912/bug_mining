@@ -5,13 +5,18 @@ from django.http import Http404
 from .models import Bug, File, Author, Release
 from .bug_id_scraping import get_bugids, get_gerrit_links
 from .js_scraping import get_inner_html, get_committed_files, get_authors, get_date
-from .code_metrics_scraping import get_code_metrics, get_release, check_vulnerability
+from .code_metrics_scraping import get_code_metrics, get_release, check_vulnerability, get_occurrences
+from .classifier import classifier_defect
 PATH = 0
 ADDED = 1
 DELETED = 2
 CHANGESET = 3
 BUGS = 4
+
 def index(request):
+    """
+    Handle index page request
+    """
     file_list = File.objects.order_by('-involved')
     template = loader.get_template('mining_main/index.html')
     context = {
@@ -20,18 +25,44 @@ def index(request):
     return render(request, 'mining_main/index.html', context)
 
 def bug_detail(request, bug_id):
+    """
+    Handle bug page request
+    """
     bug = get_object_or_404(Bug, pk=bug_id)
     return render(request, 'mining_main/bug_detail.html', {'bug': bug})
 
 def file_detail(request, file_id):
+    """
+    Handle file page request
+    """
     file = get_object_or_404(File, pk=file_id)
     return render(request, 'mining_main/file_detail.html', {'file': file})
 
 def author_detail(request, author_id):
+    """
+    Handle author page request
+    """
     author = get_object_or_404(Author, pk=author_id)
     return render(request, 'mining_main/author_detail.html', {'author': author})
 
+
+def update_author_database(author_name, file):
+    try:
+        author = Author.objects.get(author_name=author_name)
+        # author.files.add(file)
+    except Author.DoesNotExist:
+        author = Author(author_name=author_name)
+        author.save()
+        # author.files.add()
+    author.files.add(file)
+    author.save()
+    return author
+
 def update_bug_lists(request):
+    """
+    Scrape all data of all bugs from the Bug Blog
+    Limit: 6000 bugs
+    """
     ids = get_bugids()
     ids.sort()
     ids.reverse()
@@ -46,11 +77,6 @@ def update_bug_lists(request):
             get_info_from_bug(b)
             i += 1
             print("finished ", i, " bugs")
-    # bug_list = Bug.objects.order_by('bug_id')
-    # template = loader.get_template('mining_main/index.html')
-    # context = {
-    #     'bug_list': bug_list
-    # }
     file_list = File.objects.order_by('-involved')[:10]
     template = loader.get_template('mining_main/index.html')
     context = {
@@ -59,12 +85,17 @@ def update_bug_lists(request):
     return render(request, 'mining_main/index.html', context)
 
 def delete_all_bugs(request):
-    Bug.objects.all().delete()
-    File.objects.all().delete()
+    """
+    Delete all data from the database
+    """
+    Release.objests.all().delete()
     Author.objects.all().delete()
     return index(request)
 
-def get_info_from_bug(bug):
+def get_info_from_blog(bug):
+    """
+    Scrape data of the given bug from the Bug blog
+    """
     url = "https://bugs.chromium.org/p/chromium/issues/detail?id=" + bug.bug_id
     links = get_gerrit_links(url)
     if links is not None:
@@ -75,25 +106,21 @@ def get_info_from_bug(bug):
             date = get_date(innerhtml)
             if files is not None:
                 for file_info in files:
-                    f = update_file_database(file_info, bug, len(files))
+                    f = update_file_from_blog(file_info, bug, len(files))
                     a = update_author_database(author_name,f)
 
-def update_file_database(file_info, bug, changeset):
+def update_file_from_blog(file_info, bug, changeset):
+    """
+    Update data of the bug from the blog to the database
+    """
     path = file_info[PATH]
     added = file_info[ADDED]
     deleted = file_info[DELETED]
     try:
         f = File.objects.get(file_path=path)
-        # f.added += int(added)
-        # f.deleted += int(deleted)
-        # f.involved += 1
-        # f.total_changeset += changeset
-        # f.bugs.add(bug)
-        # f.save()
+
     except File.DoesNotExist:
-        # f = File(file_path=path, added=added, deleted=deleted, involved=1, total_changeset = changeset)
         f = File(file_path=path)
-        # f.bugs.add(bug)
         f.save()
     f.added += int(added)
     f.deleted += int(deleted)
@@ -108,7 +135,11 @@ def update_file_database(file_info, bug, changeset):
     return f
 
 def get_metrics_from_git(request):
-    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.117..66.0.3359.139?pretty=fuller&n=10000"
+    """
+    Scrape file metrics data from the given release changelog url
+    Metrics collected: ADDED, DELETED, CHANGSET
+    """
+    url = "https://chromium.googlesource.com/chromium/src/+log/65.0.3325.181..66.0.3359.117?pretty=fuller&n=10000"
     release_number = get_release(url)
     print("Release number: ", release_number)
     try:
@@ -123,6 +154,9 @@ def get_metrics_from_git(request):
 
 
 def update_files_from_git(file_info, release):
+    """
+    Update collected data from a release changelog to the database
+    """
     path = file_info[PATH]
     added = file_info[ADDED]
     deleted = file_info[DELETED]
@@ -157,20 +191,29 @@ def update_files_from_git(file_info, release):
     return f
 
 def check_defects_in_next_release(request):
+    """
+    Connect to the change log of the latest release for the list of defect files
+    Find the files in the database that are defective
+    """
     # files_list = File.objects.filter(release__release_number='66.0.3359.170..66.0.3359.181
+    release_number = "65.0.3325.181..66.0.3359.117"
+    # files_list = File.objects.filter(release__release_number=release_number)
     files_list = File.objects.all()
     file_path_list = set()
     for file in files_list:
         file_path_list.add(file.file_path)
 
-
-
     url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
     next_release_defects = check_vulnerability(url)
     files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
 
-
-    print_attributes(files_defects_map)
+    # url_occ = "https://chromium.googlesource.com/chromium/src/+log/65.0.3325.181..66.0.3359.117?pretty=fuller&n=500"
+    # files_occs = get_occurrences(file_path_list, url_occ)
+    # # data_set = collect_data_set(files_defects_map)
+    # for file_occ in files_occs:
+    #     file = File.objects.get(file_path=file_occ[0], release__release_number=release_number)
+    #     file.involved = file_occ[1]
+    #     file.save()
 
     template = loader.get_template('mining_main/result.html')
     context = {
@@ -179,30 +222,26 @@ def check_defects_in_next_release(request):
     return render(request, 'mining_main/result.html', context)
 
 def map_files_and_bugs(file_path_list, next_release_defects):
+    """
+    From the list of defective file of the latest release, mark all files in
+    the database if they are defective
+    """
     bugs_in_files = []
     counter = 0
-
+    defect_counter = 0
     for file in file_path_list:
-        print("checking ", counter, "/", len(file_path_list))
-        is_defected = 0
+        is_defect = 0
         if file in next_release_defects:
-            is_defected = 1
-        bugs_in_files.append(is_defected)
+            is_defect = 1
+            defect_counter += 1
+        bugs_in_files.append(is_defect)
         counter += 1
+        print("Checked ", counter, "/", len(file_path_list))
+    print("Defect: ", defect_counter, "/", len(file_path_list))
     files_defects_map = zip(file_path_list, bugs_in_files)
     return files_defects_map
 
-def update_author_database(author_name, file):
-    try:
-        author = Author.objects.get(author_name=author_name)
-        # author.files.add(file)
-    except Author.DoesNotExist:
-        author = Author(author_name=author_name)
-        author.save()
-        # author.files.add()
-    author.files.add(file)
-    author.save()
-    return author
+
 
 def print_defect_status(files_defects_map):
     defect_list = open("defect.txt", "w")
@@ -223,13 +262,15 @@ def print_defect_status(files_defects_map):
     defect_list.close()
     non_defect_list.close()
 
-def print_attributes(files_defects_map):
-    """
-    Get all the data of attributes needed for Naive Bayes Classifier
-    """
 
-    data_set = open("data_set.txt", "w")
-    file_attributes_list = []
+def collect_data_set(files_defects_map):
+    """
+    Get all the data of attributes needed for Naive Bayes Classifier from
+    the database using the file-defect mapping
+    [FILE_PATH, IS_DEFECT]
+    """
+    data_set = []
+    data_set_file = open("data_set.txt", "w")
     for file in files_defects_map:
         file_all_releases = File.objects.filter(file_path=file[PATH])
         total_added = 0
@@ -244,7 +285,35 @@ def print_attributes(files_defects_map):
         average_added = round(total_added/total_involved, 2)
         average_deleted = round(total_deleted/total_involved, 2)
         average_changset = round(total_changeset/total_involved, 2)
-        file_attributes = [file[PATH], str(total_added), str(total_deleted), str(average_changset), str(file[1])]
-        file_attributes_list.append(file_attributes)
-        data_set.write(" ".join(file_attributes) + "\n")
-    data_set.close()
+        file_attributes = [file[PATH], str(total_added), str(total_deleted),
+                            str(average_changset), str(total_involved), str(file[1])]
+        data_set.append(file_attributes)
+        data_set_file.write(" ".join(file_attributes) + "\n")
+    data_set_file.close()
+    return data_set
+
+def run_classifier(request):
+    """
+    Get list of defective files from the lastest release
+    Run classifier with the data from the database
+    """
+    files_list = File.objects.all()
+    file_path_list = set()
+    for file in files_list:
+        file_path_list.add(file.file_path)
+
+    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
+    next_release_defects = check_vulnerability(url)
+
+    files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
+    data_set = collect_data_set(files_defects_map)
+    split_ratio = 1/10
+    results = []
+    for i in range(10):
+        result = classifier_defect(data_set, split_ratio)
+        result = [round(prob*100,2) for prob in result]
+        results.append(result)
+    context = {
+        'results' : results
+    }
+    return render(request, 'mining_main/classifier.html', context)

@@ -15,5 +15,7 @@ urlpatterns = [
     path('update-from-blog', views.update_bug_lists, name='updateblog'),
     path('update-from-git', views.get_metrics_from_git, name='updategit'),
     path('delete', views.delete_all_bugs, name='delete'),
-    path('check-vuls', views.check_defects_in_next_release, name = 'checkvuls')
+    path('check-vuls', views.check_defects_in_next_release, name = 'checkvuls'),
+    path('classifier', views.run_classifier, name = 'classifier'),
+
 ]

@@ -11,7 +11,7 @@
 {% if file_list %}
     <ul>
     {% for file in file_list %}
-        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }} {{file.involved}}</a></li>
+        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }} {{file.total_changeset}}</a></li>
     {% endfor %}
     </ul>
 {% else %}
@@ -20,7 +20,9 @@
 <ul>
   <li><a href="{% url 'mining_main:updateblog' %}">Update from Chromium Bug Blog</a></li>
   <li><a href="{% url 'mining_main:updategit' %}">Update from Git</a></li>
-  <li><a href="{% url 'mining_main:delete' %}">Delete</a></li>
+  <!-- <li><a href="{% url 'mining_main:delete' %}">Delete</a></li> -->
   <li><a href="{% url 'mining_main:checkvuls' %}">Check Vulnerabilities</a></li>
+  <li><a href="{% url 'mining_main:classifier' %}">Run Classifier</a></li>
+
 
 </ul>

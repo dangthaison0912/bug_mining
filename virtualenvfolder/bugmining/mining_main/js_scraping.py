@@ -10,7 +10,7 @@ ADDED = 1
 DELETED = 2
 # setup chrome webdriver
 path_to_chromedriver = '/usr/local/bin/chromedriver'
-browser = webdriver.Chrome(executable_path = path_to_chromedriver)
+# browser = webdriver.Chrome(executable_path = path_to_chromedriver)
 
 # get info
 def get_inner_html(url):

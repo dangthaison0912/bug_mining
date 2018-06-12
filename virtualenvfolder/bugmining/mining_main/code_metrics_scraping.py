@@ -57,8 +57,8 @@ def get_code_metrics(url):
 
     if response is not None:
         html = BeautifulSoup(response, 'html.parser')
-        diffs = html.findAll('ul', {'class' : 'DiffTree'})
-        commits = html.findAll('pre', {'class' : 'u-pre u-monospace MetadataMessage'})
+        diffs = html.findAll('ul', {'class' : 'DiffTree'})[:500]
+        commits = html.findAll('pre', {'class' : 'u-pre u-monospace MetadataMessage'})[:500]
         bugs = []
         print("There are ", len(commits)," commits")
         print("There are ", len(diffs), " diffs")
@@ -67,7 +67,7 @@ def get_code_metrics(url):
             for line in commit.text.split("\n"):
                 if ("bug: " in line.lower()) or ("bug=" in line.lower()):
                     list_of_bugids = re.findall(r'\d+', line)
-                    print(" ".join(list_of_bugids))
+                    # print(" ".join(list_of_bugids))
             bugs.append(list_of_bugids)
         files_code_change = []
         file_paths = []
@@ -79,6 +79,7 @@ def get_code_metrics(url):
         for diff in diffs:
             all_as = diff.findAll('a')
             changeset = len(all_as)/2
+            print(changeset)
             for a in all_as[0::2]:
                 extended_bugs_list.append(bugs[count])
                 file_paths.append(a.text)
@@ -93,6 +94,9 @@ def get_code_metrics(url):
         # print(*files_info, sep = "\n")
         print(*files_metrics_bugs, sep = "\n")
         return files_metrics_bugs
+
+
+
 
 def get_diff_value(link):
     """
@@ -146,6 +150,22 @@ def has_bugs(commit):
         if "bug" in line.lower():
             return True
     return False
+
+def get_occurrences(file_path_list, url):
+    """
+    Find the number of time each file is committed
+    """
+    response = simple_get(url)
+    occurrences = []
+    if response is not None:
+        html = BeautifulSoup(response, 'html.parser')
+        for file_path in file_path_list:
+            occurrence = str(html).count(">"+file_path+"<")
+            print(file_path, str(occurrence))
+            occurrences.append(occurrence)
+    files_occs_map = list(zip(file_path_list, occurrences))
+    return files_occs_map
+
 if __name__ == '__main__':
     print("Getting files and code metrics")
     url = 'https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000'

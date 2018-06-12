@@ -1,9 +1,12 @@
 {% if files_defects_map %}
-    <ul>
-    {% for file in file_list %}
-        {{ file}}
+<table>
+    {% for file in files_defects_map %}
+    <tr>
+        <td>{{ file.0}}</td>
+        <td>{{ file.1}}</td>
+    </tr>
     {% endfor %}
-    </ul>
+</table>
 {% else %}
     <p>No files are available.</p>
 {% endif %}
