@@ -8,21 +8,48 @@
     <p>No bugs are available.</p>
 {% endif %} -->
 
-{% if file_list %}
+<!-- {% if file_list %}
     <ul>
     {% for file in file_list %}
-        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }} {{file.total_changeset}}</a></li>
+        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }} {{file.added}}</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No files are available.</p>
-{% endif %}
+{% endif %} -->
+Classifier Guide: <br>
+Enter Release Changelog in the form of [Previous Release]..[Next Release], <br>
+e.g: 66.0.3359.181..67.0.3396.62 <br>
+<br>
+Enter metrics in the form of [metric 1], [metrics 2], [metric 3] <br>
+e.g: 1,2,3, where <br>
 <ul>
-  <li><a href="{% url 'mining_main:updateblog' %}">Update from Chromium Bug Blog</a></li>
-  <li><a href="{% url 'mining_main:updategit' %}">Update from Git</a></li>
-  <!-- <li><a href="{% url 'mining_main:delete' %}">Delete</a></li> -->
-  <li><a href="{% url 'mining_main:checkvuls' %}">Check Vulnerabilities</a></li>
-  <li><a href="{% url 'mining_main:classifier' %}">Run Classifier</a></li>
-
-
+    <li> 0 = Number of lines ADDED </li>
+    <li> 1 = Number of lines DELETED </li>
+    <li> 2 = Average of lines ADDED </li>
+    <li> 3 = Average of lines DELETED </li>
+    <li> 4 = Average of CHANGESET </li>
 </ul>
+
+<form action="{% url 'mining_main:updategit' %}" method="post">
+    {% csrf_token %}
+    <label for="release_number">Release changelog: </label>
+    <input id="release_number" type="text" name="release_number" value="{{ current_release_number }}">
+    <input type="submit" value="Update database">
+</form>
+
+<form action="{% url 'mining_main:checkvuls' %}" method="post">
+    {% csrf_token %}
+    <label for="release_number">Release changelog: </label>
+    <input id="release_number" type="text" name="release_number" value="{{ current_release_number }}">
+    <input type="submit" value="Check Vulnerabilities">
+</form>
+
+<form action="{% url 'mining_main:classifier' %}" method="post">
+    {% csrf_token %}
+    <label for="release_number">Release changelog: </label>
+    <input id="release_number" type="text" name="release_number" value="{{ current_release_number }}">
+    <label for="metrics">Metrics to use: </label>
+    <input id="metrics" type="text" name="metrics" value="{{ current_metrics }}">
+    <input type="submit" value="Run Classifier">
+</form>

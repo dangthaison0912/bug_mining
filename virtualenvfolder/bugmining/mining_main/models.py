@@ -11,6 +11,7 @@ class Bug(models.Model):
 
 class Release(models.Model):
     release_number = models.CharField(max_length=200)
+    #to String
     def __str__(self):
         return self.release_number
 

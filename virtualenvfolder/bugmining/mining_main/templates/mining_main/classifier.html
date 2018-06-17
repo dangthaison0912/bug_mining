@@ -1,18 +1,22 @@
 {% if results %}
 <table>
   <tr>
-      <th>Probability of detection (Recal)</th>
-      <th>Probability of false alarm</th>
-      <th>Precision</th>
+      <th width = "25%">Recall</th>
+      <th width = "25%">False alarm</th>
+      <th width = "25%">Precision</th>
+      <th width = "25%">F1</th>
   </tr>
   {% for result in results %}
   <tr>
-      <td>{{ result.0 }}</td>
-      <td>{{ result.1 }}</td>
-      <td>{{ result.2 }}</td>
+      <td align = "center">{{ result.0 }}</td>
+      <td align = "center">{{ result.1 }}</td>
+      <td align = "center">{{ result.2 }}</td>
+      <td align = "center">{{ result.3 }}</td>
   </tr>
   {% endfor%}
 </table>
 {% else %}
     <p>No files are available.</p>
 {% endif %}
+
+<a href="{% url 'mining_main:index' %}">Home</a>

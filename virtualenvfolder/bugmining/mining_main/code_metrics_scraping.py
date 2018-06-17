@@ -111,7 +111,6 @@ def get_diff_value(link):
         string_parser = diff.text.split(" ")
         added = string_parser[ADDED].split(",")[1]
         deleted = string_parser[DELETED].split(",")[1]
-        # return (added, deleted)
         return (added, deleted)
 
 def check_vulnerability(url):

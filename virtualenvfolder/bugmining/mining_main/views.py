@@ -6,7 +6,10 @@ from .models import Bug, File, Author, Release
 from .bug_id_scraping import get_bugids, get_gerrit_links
 from .js_scraping import get_inner_html, get_committed_files, get_authors, get_date
 from .code_metrics_scraping import get_code_metrics, get_release, check_vulnerability, get_occurrences
-from .classifier import classifier_defect
+from .classifier import classifier_defect, classifier_defect_fold
+from .forms import ReleaseForm
+from django.http import HttpResponseRedirect
+
 PATH = 0
 ADDED = 1
 DELETED = 2
@@ -17,7 +20,7 @@ def index(request):
     """
     Handle index page request
     """
-    file_list = File.objects.order_by('-involved')
+    file_list = File.objects.order_by('-added')[:5]
     template = loader.get_template('mining_main/index.html')
     context = {
         'file_list' : file_list
@@ -139,19 +142,25 @@ def get_metrics_from_git(request):
     Scrape file metrics data from the given release changelog url
     Metrics collected: ADDED, DELETED, CHANGSET
     """
-    url = "https://chromium.googlesource.com/chromium/src/+log/65.0.3325.181..66.0.3359.117?pretty=fuller&n=10000"
-    release_number = get_release(url)
-    print("Release number: ", release_number)
-    try:
-        release = Release.objects.get(release_number=release_number)
-    except Release.DoesNotExist:
-        release = Release(release_number=release_number)
-    release.save()
-    path_metrics_changeset_bugs = get_code_metrics(url)
-    for file_info in path_metrics_changeset_bugs:
-        update_files_from_git(file_info, release)
-    return index(request)
-
+    if request.method == 'POST':
+        form = ReleaseForm(request.POST)
+        if form.is_valid():
+            release_number = request.POST.get("release_number")
+            url = "https://chromium.googlesource.com/chromium/src/+log/" + release_number + "?pretty=fuller&n=10000"
+            release_number = get_release(url)
+            print("Release number: ", release_number)
+            try:
+                release = Release.objects.get(release_number=release_number)
+            except Release.DoesNotExist:
+                release = Release(release_number=release_number)
+                release.save()
+                path_metrics_changeset_bugs = get_code_metrics(url)
+                for file_info in path_metrics_changeset_bugs:
+                    update_files_from_git(file_info, release)
+            return HttpResponseRedirect('/mining_main/')
+        else:
+            form = ReleaseForm()
+            return HttpResponseRedirect('/mining_main/')
 
 def update_files_from_git(file_info, release):
     """
@@ -195,17 +204,28 @@ def check_defects_in_next_release(request):
     Connect to the change log of the latest release for the list of defect files
     Find the files in the database that are defective
     """
-    # files_list = File.objects.filter(release__release_number='66.0.3359.170..66.0.3359.181
-    release_number = "65.0.3325.181..66.0.3359.117"
-    # files_list = File.objects.filter(release__release_number=release_number)
-    files_list = File.objects.all()
-    file_path_list = set()
-    for file in files_list:
-        file_path_list.add(file.file_path)
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = ReleaseForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            release_number = request.POST.get("release_number")
+            # release_number = "65.0.3325.181..66.0.3359.117"
+            files_list = File.objects.all()
+            file_path_list = set()
+            for file in files_list:
+                file_path_list.add(file.file_path)
 
-    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
-    next_release_defects = check_vulnerability(url)
-    files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
+            # url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
+            url = "https://chromium.googlesource.com/chromium/src/+log/" + release_number + "?pretty=fuller&n=10000"
+            next_release_defects = check_vulnerability(url)
+            files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
+        else:
+            form = ReleaseForm()
+            return HttpResponseRedirect('/mining_main/')
 
     # url_occ = "https://chromium.googlesource.com/chromium/src/+log/65.0.3325.181..66.0.3359.117?pretty=fuller&n=500"
     # files_occs = get_occurrences(file_path_list, url_occ)
@@ -220,6 +240,24 @@ def check_defects_in_next_release(request):
         'files_defects_map' : files_defects_map
     }
     return render(request, 'mining_main/result.html', context)
+
+def get_name(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = NameForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            return HttpResponseRedirect('/mining_main/')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = NameForm()
+
+    return render(request, 'mining_main/name.html', {'form': form})
 
 def map_files_and_bugs(file_path_list, next_release_defects):
     """
@@ -286,6 +324,7 @@ def collect_data_set(files_defects_map):
         average_deleted = round(total_deleted/total_involved, 2)
         average_changset = round(total_changeset/total_involved, 2)
         file_attributes = [file[PATH], str(total_added), str(total_deleted),
+                            str(average_added), str(average_deleted),
                             str(average_changset), str(total_involved), str(file[1])]
         data_set.append(file_attributes)
         data_set_file.write(" ".join(file_attributes) + "\n")
@@ -297,23 +336,42 @@ def run_classifier(request):
     Get list of defective files from the lastest release
     Run classifier with the data from the database
     """
-    files_list = File.objects.all()
-    file_path_list = set()
-    for file in files_list:
-        file_path_list.add(file.file_path)
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = ReleaseForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            release_number = request.POST.get("release_number")
+            metrics = request.POST.get("metrics")
 
-    url = "https://chromium.googlesource.com/chromium/src/+log/66.0.3359.181..67.0.3396.62?pretty=fuller&n=10000"
-    next_release_defects = check_vulnerability(url)
+            files_list = File.objects.all()
+            file_path_list = set()
+            for file in files_list:
+        # if file.release.release_number != "65.0.3325.181..66.0.3359.117":
+                file_path_list.add(file.file_path)
 
-    files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
-    data_set = collect_data_set(files_defects_map)
-    split_ratio = 1/10
-    results = []
-    for i in range(10):
-        result = classifier_defect(data_set, split_ratio)
-        result = [round(prob*100,2) for prob in result]
-        results.append(result)
-    context = {
-        'results' : results
-    }
-    return render(request, 'mining_main/classifier.html', context)
+            url = "https://chromium.googlesource.com/chromium/src/+log/" + release_number + "?pretty=fuller&n=10000"
+            next_release_defects = check_vulnerability(url)
+            # print(" ".join(metrics))
+            list_of_metrics = list(map(int, metrics.split(",")))
+            print(list_of_metrics[0])
+            files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
+            data_set = collect_data_set(files_defects_map)
+            results = classifier_defect_fold(data_set, list_of_metrics)
+
+            metric_mapping = {
+                    0 : "ADDED",
+                    1 : "DELETED",
+                    2 : "AVG_ADDED",
+                    3 : "AVG_DELETED",
+                    4 : "CHANGESET"
+            }
+
+
+            context = {
+                'results' : results
+            }
+            return render(request, 'mining_main/classifier.html', context)
+        else:
+            form = ReleaseForm()
+            return HttpResponseRedirect('/mining_main/')
