@@ -1,28 +1,11 @@
-<!-- {% if bug_list %}
-    <ul>
-    {% for bug in bug_list %}
-        <li><a href="{% url 'mining_main:bug_detail' bug.id%}">{{ bug.bug_id }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No bugs are available.</p>
-{% endif %} -->
-
-<!-- {% if file_list %}
-    <ul>
-    {% for file in file_list %}
-        <li><a href="{% url 'mining_main:file_detail' file.id%}">{{ file.file_path }} {{file.added}}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No files are available.</p>
-{% endif %} -->
-Classifier Guide: <br>
-Enter Release Changelog in the form of [Previous Release]..[Next Release], <br>
-e.g: 66.0.3359.181..67.0.3396.62 <br>
+<p>Classifier Guide: <br>
 <br>
-Enter metrics in the form of [metric 1], [metrics 2], [metric 3] <br>
-e.g: 1,2,3, where <br>
+Enter Release Changelog in the form of <b>[Previous Release]..[Next Release]</b> <br>
+e.g: <b>66.0.3359.181..67.0.3396.62</b> <br>
+<br>
+Enter metrics in the form of <b>[metric 1], [metrics 2], [metric 3]</b> <br>
+e.g: <b>1,2,3</b>, where <br>
+</p>
 <ul>
     <li> 0 = Number of lines ADDED </li>
     <li> 1 = Number of lines DELETED </li>

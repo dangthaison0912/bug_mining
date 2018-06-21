@@ -218,7 +218,8 @@ def classifier_defect_fold(data_set, list_of_metrics):
     Return recall, false alarm, precision and F1 in %
     """
     ten_sets = ten_fold_cross_validation(data_set)
-    results = []
+    positive_negative = []
+    binary_classification = []
     for i in range(len(ten_sets)):
         copy = list(ten_sets)
         testing_set = copy.pop(i)
@@ -242,9 +243,9 @@ def classifier_defect_fold(data_set, list_of_metrics):
         false_alarm = round(false_alarm*100, 2)
         precision = round(precision*100, 2)
         print(list_of_metrics[0])
-        results.append([recall, false_alarm, precision, f1])
-        # results.append([TP, TN, FP, FN])
-    return results
+        binary_classification.append([recall, false_alarm, precision, f1])
+        positive_negative.append([TP, TN, FP, FN])
+    return [binary_classification, positive_negative]
 
 if __name__ == '__main__':
     file_attributes_list = load_file("data_set.txt")

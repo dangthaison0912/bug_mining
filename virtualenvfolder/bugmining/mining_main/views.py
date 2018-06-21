@@ -358,6 +358,8 @@ def run_classifier(request):
             files_defects_map = map_files_and_bugs(file_path_list, next_release_defects)
             data_set = collect_data_set(files_defects_map)
             results = classifier_defect_fold(data_set, list_of_metrics)
+            binary_classification = results[0]
+            positive_negative = results[1]
 
             metric_mapping = {
                     0 : "ADDED",
@@ -367,11 +369,30 @@ def run_classifier(request):
                     4 : "CHANGESET"
             }
 
+            list_of_metrics_str = []
+            for metric_number in list_of_metrics:
+                list_of_metrics_str.append(metric_mapping[metric_number])
 
+            average_positive_negative = calculate_average(positive_negative)
+            average_binary_classification = calculate_average(binary_classification)
             context = {
-                'results' : results
+                'metrics_used' : list_of_metrics_str,
+                'binary_classification' : binary_classification,
+                'average_binary_classification' : average_binary_classification,
+                'positive_negative' : positive_negative,
+                'average_positive_negative' : average_positive_negative
             }
             return render(request, 'mining_main/classifier.html', context)
         else:
             form = ReleaseForm()
             return HttpResponseRedirect('/mining_main/')
+
+def calculate_average(list_of_lists):
+    sum = [0,0,0,0]
+    for list in list_of_lists:
+        for j in range(len(list)):
+            sum[j] += list[j]
+
+    for i in range(len(sum)):
+        sum[i] = round(sum[i]/len(list_of_lists), 2)
+    return sum

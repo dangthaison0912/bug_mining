@@ -1,22 +1,107 @@
-{% if results %}
-<table>
-  <tr>
-      <th width = "25%">Recall</th>
-      <th width = "25%">False alarm</th>
-      <th width = "25%">Precision</th>
-      <th width = "25%">F1</th>
-  </tr>
-  {% for result in results %}
-  <tr>
-      <td align = "center">{{ result.0 }}</td>
-      <td align = "center">{{ result.1 }}</td>
-      <td align = "center">{{ result.2 }}</td>
-      <td align = "center">{{ result.3 }}</td>
-  </tr>
-  {% endfor%}
-</table>
-{% else %}
-    <p>No files are available.</p>
-{% endif %}
+<style type="text/css">
+#container {
+  height: 70%;
+  width: 100%;
+  display: flex;
+}
+#leftBlock {
+  width: 50%;
+  background-color: white;
+}
 
+#rightBlock {
+  width: 50%;
+  background-color: white;
+}
+</style>
+
+{% if metrics_used %}
+<p>Metrics used in Classifier:<br></p>
+<br>
+  {% for metric in metrics_used %}
+    <font color="red"> <i>{{metric}}</i></font><br>
+  {% endfor%}
+{% else %}
+  <p>No metrics are available.</p>
+<br>
+{% endif %}
+<div id="container">
+
+
+  <div id="leftBlock">
+    {% if binary_classification %}
+    <br>
+    <table border="1">
+      <tr>
+          <th width = "20%"></th>
+          <th width = "20%">Recall</th>
+          <th width = "20%">False alarm</th>
+          <th width = "20%">Precision</th>
+          <th width = "20%">F1</th>
+      </tr>
+      {% for result in binary_classification %}
+      <tr>
+          <td></td>
+          <td align = "center">{{ result.0 }}</td>
+          <td align = "center">{{ result.1 }}</td>
+          <td align = "center">{{ result.2 }}</td>
+          <td align = "center">{{ result.3 }}</td>
+      </tr>
+      {% endfor%}
+      {% if average_binary_classification %}
+      <tr bgcolor = "#ADD8E6">
+        <td align = "center">Average</td>
+        <td align = "center">{{ average_binary_classification.0 }}</td>
+        <td align = "center">{{ average_binary_classification.1 }}</td>
+        <td align = "center">{{ average_binary_classification.2 }}</td>
+        <td align = "center">{{ average_binary_classification.3 }}</td>
+      </tr>
+      {% else %}
+        <p>No results are available.</p>
+      {% endif %}
+
+    </table>
+    {% else %}
+        <p>No results are available.</p>
+    {% endif %}
+  </div>
+
+  <div id="rightBlock">
+    {% if positive_negative %}
+    <br>
+    <table border="1">
+      <tr>
+          <th width = "50"></th>
+          <th width = "50">  TP  </th>
+          <th width = "50">  TN  </th>
+          <th width = "50">  FP  </th>
+          <th width = "50">  FN  </th>
+      </tr>
+      {% for item in positive_negative %}
+      <tr>
+          <td></td>
+          <td align = "center">{{ item.0 }}</td>
+          <td align = "center">{{ item.1 }}</td>
+          <td align = "center">{{ item.2 }}</td>
+          <td align = "center">{{ item.3 }}</td>
+      </tr>
+      {% endfor%}
+      {% if average_positive_negative %}
+      <tr bgcolor = "#ADD8E6">
+        <td align = "center">Average</td>
+        <td align = "center">{{ average_positive_negative.0 }}</td>
+        <td align = "center">{{ average_positive_negative.1 }}</td>
+        <td align = "center">{{ average_positive_negative.2 }}</td>
+        <td align = "center">{{ average_positive_negative.3 }}</td>
+      </tr>
+      {% else %}
+        <p>No results are available.</p>
+      {% endif %}
+    </table>
+    {% else %}
+        <p>No results are available.</p>
+    {% endif %}
+  </div>
+
+</div>
 <a href="{% url 'mining_main:index' %}">Home</a>
