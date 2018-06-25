@@ -116,6 +116,7 @@ def get_diff_value(link):
 def check_vulnerability(url):
     """
     Check if the files from the list involved in any bug from the url
+    Currently saved in the file "releaseMay29th" for convenient purpose
     """
 
     # response = simple_get(url)
@@ -135,7 +136,7 @@ def check_vulnerability(url):
     #                 defected_files.add(a.text)
     #                 print(a.text)
     #         counter += 1
-
+    #
     # return list(defected_files)
 
     with open('releaseMay29th.txt') as f:

@@ -5,6 +5,14 @@ from bs4 import BeautifulSoup
 import urllib
 
 FIXED_ROW = 6
+
+
+
+"""
+Purpose: Collect bug information from the Chromium Bug Blog
+"""
+
+
 def simple_get(url):
     """
     Attempts to get the content of the url by making an HTTP GET requestself.

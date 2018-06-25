@@ -16,17 +16,10 @@ TRUE_NEGATIVE = 1
 FALSE_POSITIVE = 2
 FALSE_NEGATIVE = 3
 
-# def load_file(file_location):
-#     """
-#     Extract data from file into the following form:
-#     FILE_PATH ADDED DELETED CHANGESET IS_DEFECT
-#     """
-#     file_attributes_list = []
-#     with open(file_location, "r") as file:
-#         for line in file:
-#             file_attributes = line.split()
-#             file_attributes_list.append(file_attributes)
-#     return file_attributes_list
+
+"""
+Purpose: run the Classifier given the dataset
+"""
 
 def splitDataSet(all_data_set, split_ratio):
     """

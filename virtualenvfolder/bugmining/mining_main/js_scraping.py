@@ -13,6 +13,10 @@ path_to_chromedriver = '/usr/local/bin/chromedriver'
 # browser = webdriver.Chrome(executable_path = path_to_chromedriver)
 
 # get info
+
+"""
+Purpose: scrape Javascript element from the website
+"""
 def get_inner_html(url):
     """
     Attempts to get the content of the url by making an HTTP GET requestself.
